@@ -1,0 +1,735 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohammed Ahmed Khan | Python Full Stack Developer</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+<video class="global-bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="{% static 'vedio/mountain.mp4' %}" type="video/mp4">
+</video>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">What I Build</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- =========================================================
+     PREMIUM CINEMATIC HERO
+     ========================================================= -->
+
+    <section id="home" class="hero premium-hero">
+
+        <!-- BACKGROUND VIDEO -->
+        <div class="hero-video-layer">
+
+            <video
+                id="heroVideo"
+                class="hero-background-video"
+                muted
+                autoplay
+                playsinline
+                preload="auto"
+            >
+                <source
+                    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4"
+                    type="video/mp4"
+                >
+            </video>
+
+            <div class="hero-video-overlay"></div>
+            <div class="hero-video-vignette"></div>
+
+        </div>
+
+
+        <!-- CINEMATIC CONTENT -->
+        <div class="hero-inner">
+
+            <!-- LEFT CONTENT -->
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    PYTHON FULL STACK DEVELOPER
+                    <span>•</span>
+                    BACKEND
+                    <span>•</span>
+                    WEB DEVELOPMENT
+                </div>
+
+
+                <h1>
+                    Mohammed<br>
+                    Ahmed Khan
+                </h1>
+
+
+                <p class="hero-description">
+                    I build modern, scalable web applications using
+                    Python, Django, React and modern web technologies.
+                </p>
+
+
+                <p class="hero-status">
+                    <span class="status-dot">●</span>
+                    Open to opportunities
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn primary-btn"
+                    >
+                        View My Work
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn secondary-btn"
+                    >
+                        Let's Connect
+                    </a>
+
+                    <a
+                        href="{% static 'resume.pdf' %}"
+                        class="btn secondary-btn"
+                        target="_blank"
+                    >
+                        View Resume ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT VISUAL -->
+            <div class="hero-visual">
+
+                <!-- SOFT GLASS ORBIT -->
+                <div class="hero-orbit orbit-one"></div>
+                <div class="hero-orbit orbit-two"></div>
+
+
+                <!-- GLASS CODE CARD -->
+                <div class="hero-code-card liquid-glass">
+
+                    <div class="code-top">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="code-content">
+
+                        <p>
+                            <span>&lt;</span><b>developer</b><span>&gt;</span>
+                        </p>
+
+                        <p>
+                            <span class="code-key">name:</span>
+                            Mohammed Ahmed Khan
+                        </p>
+
+                        <p>
+                            <span class="code-key">role:</span>
+                            Python Full Stack Developer
+                        </p>
+
+                        <p>
+                            <span class="code-key">backend:</span>
+                            Django
+                        </p>
+
+                        <p>
+                            <span class="code-key">frontend:</span>
+                            React
+                        </p>
+
+                        <p>
+                            <span class="code-key">database:</span>
+                            MySQL
+                        </p>
+
+                        <p>
+                            <span>&lt;/</span><b>developer</b><span>&gt;</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FLOATING GLASS TECHNOLOGY TAGS -->
+
+                <div class="floating-tech tech-python">
+                    PYTHON
+                </div>
+
+                <div class="floating-tech tech-django">
+                    DJANGO
+                </div>
+
+                <div class="floating-tech tech-react">
+                    REACT
+                </div>
+
+                <div class="floating-tech tech-sql">
+                    SQL
+                </div>
+
+
+                <!-- SMALL GLASS STATUS -->
+                <div class="hero-glass-status">
+                    <span></span>
+                    BUILDING WITH CODE
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- HERO BOTTOM INDICATOR -->
+        <div class="hero-scroll-indicator">
+
+            <span>SCROLL TO EXPLORE</span>
+
+            <div class="scroll-line"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="section-label">01 — ABOUT</div>
+
+        <div class="about-content">
+            <h2>
+                I build digital experiences
+                that are simple, useful and built to last.
+            </h2>
+
+            <p>
+                I'm Mohammed Ahmed Khan, a Python Full Stack Developer
+                with a background in Information Technology. I enjoy
+                building web applications, developing backend systems
+                and solving real-world problems through technology.
+            </p>
+
+            <p>
+                My development experience includes Python, Django,
+                Django REST Framework, React, JavaScript, SQL and MySQL.
+                I also use AI tools such as GPT and Claude to support
+                development, research and productivity.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+<!-- =====================================================
+     02 — SKILLS
+===================================================== -->
+
+<section id="skills" class="skills neumorphic-skills">
+
+    <div class="skills-content">
+
+        <div class="section-label">
+            02 — SKILLS
+        </div>
+
+        <h2>
+            Technologies I work with.
+        </h2>
+
+        <div class="neumorphic-skills-grid">
+
+            <!-- LANGUAGES -->
+            <div class="neumorphic-skill-card">
+
+                <span class="skill-card-number">01</span>
+
+                <h3>Languages</h3>
+
+                <div class="skill-tags">
+
+                    <span>Python</span>
+                    <span>JavaScript</span>
+                    <span>SQL</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRONTEND -->
+            <div class="neumorphic-skill-card">
+
+                <span class="skill-card-number">02</span>
+
+                <h3>Frontend</h3>
+
+                <div class="skill-tags">
+
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                    <span>React</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- BACKEND -->
+            <div class="neumorphic-skill-card">
+
+                <span class="skill-card-number">03</span>
+
+                <h3>Backend</h3>
+
+                <div class="skill-tags">
+
+                    <span>Django</span>
+                    <span>Django REST Framework</span>
+                    <span>REST APIs</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATABASE & TOOLS -->
+            <div class="neumorphic-skill-card">
+
+                <span class="skill-card-number">04</span>
+
+                <h3>Database &amp; Tools</h3>
+
+                <div class="skill-tags">
+
+                    <span>MySQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+    <!-- SERVICES -->
+ <!-- =====================================================
+     03 — WHAT I BUILD
+===================================================== -->
+
+<section id="services" class="services glass-services">
+
+    <div class="services-content">
+
+        <div class="section-label">
+            03 — WHAT I BUILD
+        </div>
+
+        <h2>What I build.</h2>
+
+
+        <div class="glass-services-grid">
+
+            <!-- 01 -->
+            <div class="glass-service-card">
+
+                <span class="glass-service-number">
+                    01
+                </span>
+
+                <h3>
+                    Web Applications
+                </h3>
+
+                <p>
+                    Full-stack web applications using
+                    Python, Django, React and modern
+                    web technologies.
+                </p>
+
+                <div class="glass-service-line"></div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="glass-service-card">
+
+                <span class="glass-service-number">
+                    02
+                </span>
+
+                <h3>
+                    Backend &amp; APIs
+                </h3>
+
+                <p>
+                    Backend systems and REST APIs
+                    with Django REST Framework
+                    and database integration.
+                </p>
+
+                <div class="glass-service-line"></div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="glass-service-card">
+
+                <span class="glass-service-number">
+                    03
+                </span>
+
+                <h3>
+                    Database Solutions
+                </h3>
+
+                <p>
+                    Designing and working with
+                    relational databases using
+                    SQL and MySQL.
+                </p>
+
+                <div class="glass-service-line"></div>
+
+            </div>
+
+
+            <!-- 04 -->
+            <div class="glass-service-card">
+
+                <span class="glass-service-number">
+                    04
+                </span>
+
+                <h3>
+                    AI-Assisted Development
+                </h3>
+
+                <p>
+                    Using modern AI tools such as
+                    GPT and Claude to support
+                    development, research and
+                    productivity.
+                </p>
+
+                <div class="glass-service-line"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- EDUCATION -->
+    <section id="education" class="education">
+        <div class="section-label">04 — EDUCATION</div>
+
+        <div class="education-content">
+            <h2>Education & Training</h2>
+
+            <div class="education-item">
+                <div class="education-year">2022 — 2026</div>
+
+                <div>
+                    <h3>BE — Information Technology</h3>
+                    <p>Osmania University</p>
+                    <p>CGPA: 7.05 / 10</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-year">2025 — 2026</div>
+
+                <div>
+                    <h3>Python Full Stack Web Development</h3>
+                    <p>Inspanner Academy</p>
+                    <p>Python • Django • React • JavaScript • SQL</p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-year">2026</div>
+
+                <div>
+                    <h3>AI Tools Workshop</h3>
+                    <p>be10x</p>
+                    <p>Certificate of Completion — AI Tools & ChatGPT</p>
+                    <p>Issued: March 22, 2026</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <div class="section-label">05 — PROJECTS</div>
+
+        <div class="projects-content">
+            <h2>Things I've built.</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-number">01</div>
+
+                    <h3>Employee Management System</h3>
+
+                    <p>
+                        A full-stack employee management web application built with
+                        Django for managing employee records efficiently.
+                    </p>
+
+                    <ul class="project-features">
+                        <li>Employee authentication and management</li>
+                        <li>CRUD operations for employee records</li>
+                        <li>Search and filtering functionality</li>
+                        <li>Database integration with SQL</li>
+                    </ul>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>SQL</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-number">02</div>
+
+                    <h3>DeepTraffic-VTS</h3>
+
+                    <p>
+                        A deep learning-based traffic monitoring system designed to
+                        detect vehicles, track traffic movement and predict traffic flow.
+                    </p>
+
+                    <ul class="project-features">
+                        <li>Vehicle detection using YOLOv8</li>
+                        <li>Real-time vehicle tracking</li>
+                        <li>Traffic-flow prediction using LSTM</li>
+                        <li>Deep learning-based traffic analysis</li>
+                    </ul>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>YOLOv8</span>
+                        <span>LSTM</span>
+                        <span>Deep Learning</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-number">03</div>
+
+                    <h3>Cash Payment Gateway</h3>
+
+                    <p>
+                        A web-based payment application developed to handle
+                        payment workflows and transaction-related information.
+                    </p>
+
+                    <ul class="project-features">
+                        <li>Payment workflow management</li>
+                        <li>Transaction information handling</li>
+                        <li>Interactive web interface</li>
+                        <li>Backend integration using Django</li>
+                    </ul>
+
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <!-- PROJECT 04 -->
+                <article class="project-card">
+                    <div class="project-number">04</div>
+
+                    <h3>Inspanner Academy Landing Page</h3>
+
+                    <p>
+                        A modern and responsive landing page designed and developed
+                        for Inspanner Academy with a professional and engaging user interface.
+                    </p>
+
+                    <ul class="project-features">
+                        <li>Responsive landing page design</li>
+                        <li>Modern UI and interactive sections</li>
+                        <li>Responsive navigation</li>
+                        <li>Mobile-friendly layout</li>
+                    </ul>
+
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHub ↗</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience">
+        <div class="section-label">06 — EXPERIENCE</div>
+
+        <div class="experience-content">
+            <h2>Experience & Training</h2>
+
+            <div class="experience-item">
+                <div class="experience-period">2025 — 2026</div>
+
+                <div>
+                    <h3>Python Full Stack Web Development</h3>
+                    <p class="experience-company">Inspanner Academy</p>
+
+                    <p>
+                        Completed practical training in Python Full Stack Web
+                        Development, working with Python, Django, REST APIs,
+                        React, JavaScript, HTML, CSS and SQL.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-period">2026</div>
+
+                <div>
+                    <h3>Backend Development</h3>
+                    <p class="experience-company">Project & Internship Experience</p>
+
+                    <p>
+                        Worked on backend-focused applications using Django,
+                        database integration, REST APIs and deployment workflows.
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-year">Training</div>
+
+                <div>
+                    <h3>AI Tools & Productivity</h3>
+                    <p>AI Tools Certification</p>
+                    <p>GPT • Claude • AI-assisted Development</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="section-label">07 — CONTACT</div>
+
+        <div class="contact-content">
+            <h2>Let's build something together.</h2>
+
+            <p>
+                I'm open to opportunities in Python Full Stack Development,
+                Backend Development and Software Development.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:ahmedkhanm565@gmail.com">
+                    Email ↗
+                </a>
+
+                <a href="https://www.linkedin.com/in/Ahmedkhan69/" target="_blank">
+                    LinkedIn ↗
+                </a>
+
+                <a href="https://github.com/ahmedkhan-a" target="_blank">
+                    GitHub ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Mohammed Ahmed Khan</p>
+        <p>Python Full Stack Developer</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

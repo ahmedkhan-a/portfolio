@@ -1,0 +1,7169 @@
+/* =========================================================
+   STYLE.CSS — CLEANED (same look and behavior as before)
+   ---------------------------------------------------------
+   This file is a stack of layers. Later layers override
+   earlier ones, so the ORDER of blocks matters. Do not
+   re-order blocks.
+
+   WHO WINS (so you don't get confused):
+   - Hero (#home)                -> "PREMIUM CINEMATIC HERO" block
+                                    + the "HERO ..." fix blocks at the bottom
+   - Project cards               -> PHASE 3
+   - Navbar                      -> PHASE 4 + PHASE 8 (navbar glass)
+   - Education / Experience /
+     Contact / Footer            -> PHASE 5 / 6 / 7
+   - Backgrounds & section glows -> PHASE 8
+
+   CLASSES / VARIABLES USED BY script.js (do not remove):
+   .reveal  .visible  .active  .scrolled  .show
+   .cursor-glow  .scroll-progress  .back-to-top
+   --section-parallax
+   ========================================================= */
+
+
+/* ================================
+   GLOBAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1f1a17;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    min-height: 100vh;
+    padding: 120px 8%;
+}
+
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+
+/* ================================
+   NAVBAR (base)
+================================ */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(31, 26, 23, 0.08);
+}
+
+nav a {
+    color: #1f1a17;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* ================================
+   HERO (base styles live in
+   "PREMIUM CINEMATIC HERO" below)
+================================ */
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-content {
+    max-width: 1000px;
+}
+
+.about-content h2 {
+    max-width: 950px;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 45px;
+}
+
+.about-content p {
+    max-width: 750px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.75;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-content {
+    max-width: 1100px;
+}
+
+.skills-content h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 50px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.skill-group {
+    padding: 30px 0;
+    border-top: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.skill-group h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tags span {
+    padding: 12px 18px;
+    border: 1px solid rgba(31, 26, 23, 0.25);
+    border-radius: 30px;
+    font-size: 0.9rem;
+}
+
+.skills-list span:hover {
+    background: #1f1a17;
+    color: #f5f0e8;
+}
+
+
+/* ================================
+   EDUCATION
+================================ */
+
+.education {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.education-content {
+    max-width: 1100px;
+}
+
+.education-content > h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+.education-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 35px 0;
+    border-top: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.education-item:last-child {
+    border-bottom: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projects-content {
+    max-width: 1200px;
+}
+
+.projects-content > h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.project-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    opacity: 0.5;
+    margin-bottom: 40px;
+}
+
+.project-card > p {
+    max-width: 550px;
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.project-features {
+    margin: 20px 0;
+    padding-left: 20px;
+    opacity: 0.75;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+.project-links a {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #1f1a17;
+    padding-bottom: 3px;
+}
+
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-content {
+    max-width: 1100px;
+}
+
+.experience-content > h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 35px 0;
+    border-top: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.experience-item:last-child {
+    border-bottom: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.experience-period {
+    font-size: 0.9rem;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.experience-company {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* NOTE: on hover the text turns cream while the background stays
+   almost transparent (see PHASE 6). Kept exactly as it was. */
+.contact-links a:hover {
+    color: #f5f0e8;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    padding: 30px 8%;
+    border-top: 1px solid rgba(31, 26, 23, 0.15);
+    text-align: center;
+}
+
+
+
+
+/* ================================
+   SERVICES / WHAT I BUILD
+================================ */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.services-content {
+    max-width: 1200px;
+}
+
+.services-content h2 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.service-item {
+    padding: 35px 30px;
+    border-bottom: 1px solid rgba(31, 26, 23, 0.2);
+    border-right: 1px solid rgba(31, 26, 23, 0.2);
+}
+
+.service-item:first-child {
+    padding-left: 0;
+}
+
+.service-item:last-child {
+    border-right: none;
+}
+
+.service-item > span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.service-item > span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.service-item h3 {
+    font-size: 1.6rem;
+    margin: 20px 0 12px;
+}
+
+.service-item p {
+    max-width: 500px;
+    opacity: 0.7;
+}
+
+
+/* ================================
+   RESPONSIVE (base)
+================================ */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 18px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 15px 6%;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    .section-label {
+        margin-bottom: 40px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-content h2 {
+        letter-spacing: -1px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-item,
+    .service-item:nth-child(odd),
+    .service-item:nth-child(even) {
+        border-right: none;
+        padding: 30px 0;
+    }
+
+    /* only text-transform is visible here; the hero block overrides the rest */
+    .hero-status {
+        text-transform: uppercase;
+    }
+
+    .about-content h2,
+    .skills-content h2,
+    .tools-content h2,
+    .education-content > h2,
+    .projects-content > h2,
+    .experience-content > h2 {
+        letter-spacing: -1px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    nav {
+        gap: 10px;
+    }
+
+    .btn,
+    .contact-links a {
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   SCROLL REVEAL (JS adds .reveal / .visible)
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   EDUCATION & EXPERIENCE ANIMATION
+========================= */
+
+.visible .education-item,
+.visible .experience-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.education-item:nth-child(2),
+.experience-item:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.education-item:nth-child(3),
+.experience-item:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.education-item:nth-child(4),
+.experience-item:nth-child(4) {
+    transition-delay: 0.45s;
+}
+
+
+/* =========================
+   CONTACT ANIMATION
+========================= */
+
+.contact-content h2,
+.contact-content > p,
+.contact-links {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact.visible .contact-content h2 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact.visible .contact-content > p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s;
+}
+
+.contact.visible .contact-links {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+
+/* =========================
+   FOOTER ANIMATION
+========================= */
+
+.footer {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact.visible + .footer {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+
+/* =========================
+   SECTION LABEL ANIMATION
+========================= */
+
+.section-label {
+    opacity: 0;
+    transform: translateX(-25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible .section-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+/* =========================
+   PROJECT CARD REVEAL
+========================= */
+
+.project-card {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+}
+
+.projects.visible .project-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects.visible .project-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.projects.visible .project-card:nth-child(2) {
+    transition-delay: 0.25s;
+}
+
+.projects.visible .project-card:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.projects.visible .project-card:nth-child(4) {
+    transition-delay: 0.55s;
+}
+
+
+/* =========================
+   PAGE LOAD
+========================= */
+
+body {
+    animation: pageLoad 0.8s ease-out;
+}
+
+@keyframes pageLoad {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   ABOUT HEADING MOTION
+========================= */
+
+.about.visible .about-content h2 {
+    animation: aboutHeading 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes aboutHeading {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   ABOUT PARAGRAPHS
+========================= */
+
+.about-content p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about.visible .about-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about.visible .about-content p:nth-of-type(1) {
+    transition-delay: 0.25s;
+}
+
+.about.visible .about-content p:nth-of-type(2) {
+    transition-delay: 0.4s;
+}
+
+
+/* =========================
+   SKILLS GROUP ANIMATION
+========================= */
+
+.skill-group {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.skills.visible .skill-group {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skills.visible .skill-group:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.skills.visible .skill-group:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.skills.visible .skill-group:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.skills.visible .skill-group:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   ADVANCED CINEMATIC ANIMATIONS
+========================================================= */
+
+/* Hero content parallax-ready */
+
+.hero-content {
+    will-change: transform;
+}
+
+
+/* Hero text animations */
+
+.hero-label {
+    animation: heroLabelReveal 1s ease-out 0.2s both;
+}
+
+@keyframes heroLabelReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    animation: heroTitleReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+@keyframes heroTitleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-description {
+    animation: heroDescriptionReveal 1s ease-out 0.7s both;
+}
+
+@keyframes heroDescriptionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-status {
+    animation: heroStatusReveal 1s ease-out 0.85s both;
+}
+
+@keyframes heroStatusReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    animation: heroButtonsReveal 1s ease-out 1s both;
+}
+
+@keyframes heroButtonsReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Button light sweep (hero buttons) */
+
+.btn::before,
+.contact-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.12);
+    transition: left 0.45s ease;
+    pointer-events: none;
+}
+
+.btn:hover::before,
+.contact-links a:hover::before {
+    left: 100%;
+}
+
+.primary-btn:hover {
+    letter-spacing: 0.5px;
+}
+
+
+/* Skill / tool tags */
+
+.skills-list span,
+.skill-tags span,
+.tools-list span {
+    display: inline-block;
+}
+
+
+/* Tools floating animation */
+
+.tools-list span {
+    animation: toolFloat 4s ease-in-out infinite;
+}
+
+.tools-list span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.tools-list span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.tools-list span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.tools-list span:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.tools-list span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+.tools-list span:nth-child(7) {
+    animation-delay: 1.8s;
+}
+
+@keyframes toolFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/* Contact link hover (letter-spacing is what stays visible) */
+
+.contact-links a:hover {
+    transform: translateX(7px);
+    letter-spacing: 1px;
+}
+
+
+/* Footer */
+
+.footer {
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.footer:hover p {
+    opacity: 0.65;
+    transform: translateY(-2px);
+}
+
+
+/* Floating visual — placeholder, no element uses it yet */
+
+.floating-visual {
+    animation: floatingVisual 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes floatingVisual {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Animated background circles (final look is set in PHASE 8 override) */
+
+.about,
+.skills,
+.tools,
+.services,
+.education,
+.projects,
+.experience,
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.about::after,
+.skills::after,
+.tools::after,
+.services::after,
+.education::after,
+.projects::after,
+.experience::after,
+.contact::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: 4%;
+    top: 15%;
+    border-radius: 50%;
+    background: rgba(31, 26, 23, 0.06);
+    border: 1px solid rgba(31, 26, 23, 0.08);
+    pointer-events: none;
+    animation: sectionCircleFloat 7s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes sectionCircleFloat {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.35;
+    }
+
+    25% {
+        transform: translate(-15px, 18px) scale(1.04);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translate(-5px, -15px) scale(0.97);
+        opacity: 0.4;
+    }
+
+    75% {
+        transform: translate(18px, 10px) scale(1.05);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.35;
+    }
+
+}
+
+.skills::after {
+    animation-duration: 8s;
+    animation-delay: -2s;
+}
+
+.tools::after {
+    animation-duration: 6s;
+    animation-delay: -4s;
+}
+
+.services::after {
+    animation-duration: 9s;
+    animation-delay: -3s;
+}
+
+.education::after {
+    animation-duration: 7s;
+    animation-delay: -1s;
+}
+
+.projects::after {
+    animation-duration: 8.5s;
+    animation-delay: -5s;
+}
+
+.experience::after {
+    animation-duration: 6.5s;
+    animation-delay: -2.5s;
+}
+
+.contact::after {
+    animation-duration: 9s;
+    animation-delay: -4.5s;
+}
+
+
+/* Cursor glow (element is created by script.js) */
+
+.cursor-glow {
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(
+        circle,
+        rgba(31, 26, 23, 0.08) 0%,
+        rgba(31, 26, 23, 0) 70%
+    );
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    .cursor-glow {
+        display: none;
+    }
+
+}
+
+
+/* Reduced motion (global) */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+
+/* =========================================================
+   HERO VISUAL — pieces that are still visible
+   (position, size, tags, orbits are set in the PREMIUM HERO
+   block and the HERO fix blocks at the bottom)
+========================================================= */
+
+.hero-visual {
+    transition: transform 0.15s ease-out;
+}
+
+.hero-code-card {
+    top: 50%;
+    left: 50%;
+}
+
+.code-top span {
+    opacity: 0.45;
+}
+
+.code-content span {
+    opacity: 0.55;
+}
+
+.hero-orbit {
+    top: 50%;
+    left: 50%;
+}
+
+
+/* =========================================================
+   CINEMATIC SECTION TRANSITIONS
+========================================================= */
+
+.about,
+.skills,
+.tools,
+.services,
+.education,
+.projects,
+.experience,
+.contact {
+    transition:
+        transform 0.8s ease,
+        opacity 0.8s ease;
+}
+
+
+/* =========================================================
+   STRONGER BACKGROUND CIRCLES
+========================================================= */
+
+.about::after,
+.skills::after,
+.tools::after,
+.services::after,
+.education::after,
+.projects::after,
+.experience::after,
+.contact::after {
+    background:
+        radial-gradient(
+            circle,
+            rgba(31, 26, 23, 0.075) 0%,
+            rgba(31, 26, 23, 0.035) 45%,
+            rgba(31, 26, 23, 0) 72%
+        );
+
+    border:
+        1px solid rgba(31, 26, 23, 0.11);
+
+    box-shadow:
+        0 0 70px rgba(31, 26, 23, 0.04);
+}
+
+
+/* =========================================================
+   PROJECT CARD — hover outline (::after)
+========================================================= */
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    transition: border-color 0.4s ease;
+    pointer-events: none;
+}
+
+.project-card:hover::after {
+    border-color: rgba(31, 26, 23, 0.15);
+}
+
+
+/* =========================================================
+   SKILLS PREMIUM HOVER
+========================================================= */
+
+.skill-group {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.skill-group:hover {
+    transform: translateX(6px);
+}
+
+.skill-tags span {
+    display: inline-block;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.skill-tags span:hover {
+    transform: translateY(-5px);
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   TOOLS INTERACTION
+========================================================= */
+
+.tools-list span {
+    cursor: default;
+}
+
+.tools-list span:hover {
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   EXPERIENCE h3 HOVER
+========================================================= */
+
+.experience-item h3 {
+    transition:
+        transform 0.4s ease;
+}
+
+.experience-item:hover h3 {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CONTACT LINK UNDERLINE
+========================================================= */
+
+.contact-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.contact-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   REDUCED MOTION (hero visual / cards)
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-visual,
+    .hero-orbit,
+    .floating-tech {
+        animation: none !important;
+    }
+
+    .project-card::before {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   JS INTERACTION SUPPORT
+========================================================= */
+
+
+/* SCROLL PROGRESS */
+
+.scroll-progress {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #1f1a17;
+
+    z-index: 10000;
+
+    transition: width 0.08s linear;
+}
+
+
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+
+    right: 28px;
+    bottom: 28px;
+
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid rgba(31, 26, 23, 0.2);
+
+    border-radius: 50%;
+
+    background: #f5f0e8;
+    color: #1f1a17;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease,
+        transform 0.35s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+
+    z-index: 9998;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: #1f1a17;
+    color: #f5f0e8;
+    transform: translateY(-5px);
+}
+
+
+/* SECTION PARALLAX */
+
+.about::after,
+.skills::after,
+.tools::after,
+.services::after,
+.education::after,
+.projects::after,
+.experience::after,
+.contact::after {
+    margin-top: var(--section-parallax, 0px);
+}
+
+
+/* PROJECT 3D */
+
+.project-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .scroll-progress {
+        height: 2px;
+    }
+
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-progress {
+        transition: none;
+    }
+
+    .back-to-top {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
+   CINEMATIC SECTION DEPTH — PHASE 2
+========================================================= */
+
+/* Keep actual content above decorative elements */
+
+.about > *,
+.skills > *,
+.tools > *,
+.services > *,
+.education > *,
+.projects > *,
+.experience > *,
+.contact > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Headings depth */
+
+.about h2,
+.skills h2,
+.tools h2,
+.services h2,
+.education h2,
+.projects h2,
+.experience h2,
+.contact h2 {
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.8s ease;
+}
+
+
+/* Education / experience timeline marker (see PHASE 5 for the dot) */
+
+.education-item::before,
+.experience-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: -12px;
+    top: 5px;
+
+    width: 2px;
+    height: 0;
+
+    background: #1f1a17;
+
+    opacity: 0.35;
+
+    transition:
+        height 0.7s ease;
+}
+
+
+/* Skills group underline */
+
+.skill-group::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    opacity: 0.25;
+
+    transition:
+        width 0.5s ease;
+}
+
+.skill-group:hover::after {
+    width: 100%;
+}
+
+
+/* Tools */
+
+.tools-list {
+    position: relative;
+}
+
+.tools-list span {
+    will-change: transform;
+}
+
+
+/* Footer separation */
+
+.footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 80%;
+    max-width: 1000px;
+
+    height: 1px;
+
+    background: rgba(31, 26, 23, 0.1);
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================================================
+   PHASE 3 — PREMIUM PROJECT CARDS
+========================================================= */
+
+.projects-grid {
+    perspective: 1200px;
+}
+
+
+/* Card */
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 30px 28px;
+
+    border: 1px solid rgba(31, 26, 23, 0.13);
+
+    border-radius: 2px;
+
+    background: rgba(245, 240, 232, 0.55);
+
+    box-shadow:
+        0 10px 25px rgba(31, 26, 23, 0.035);
+
+    transform-style: preserve-3d;
+
+    will-change: transform;
+
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.55s ease,
+        border-color 0.4s ease,
+        background 0.4s ease;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-14px)
+        rotateX(1deg)
+        rotateY(-1deg);
+
+    background: rgba(245, 240, 232, 0.9);
+
+    border-color: rgba(31, 26, 23, 0.25);
+
+    box-shadow:
+        0 30px 70px rgba(31, 26, 23, 0.13),
+        0 8px 20px rgba(31, 26, 23, 0.06);
+}
+
+
+/* Card light sweep */
+
+.project-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    pointer-events: none;
+
+    transition: left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover::before {
+    left: 150%;
+}
+
+
+/* Top card line */
+
+.project-card::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #1f1a17;
+
+    transition:
+        width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project-card:hover::after {
+    width: 100%;
+}
+
+
+/* Project number */
+
+.project-number {
+    position: relative;
+
+    display: inline-block;
+
+    width: fit-content;
+
+    margin-bottom: 28px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+
+    transform: translateZ(20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        letter-spacing 0.4s ease;
+}
+
+.project-card:hover .project-number {
+    opacity: 0.8;
+
+    letter-spacing: 5px;
+
+    transform:
+        translateZ(25px)
+        translateX(8px);
+}
+
+
+/* Project title */
+
+.project-card h3 {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(25px, 2.3vw, 34px);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.8px;
+
+    transform: translateZ(30px);
+
+    transition:
+        transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+        letter-spacing 0.4s ease;
+}
+
+.project-card:hover h3 {
+    transform:
+        translateZ(40px)
+        translateX(7px);
+
+    letter-spacing: -0.3px;
+}
+
+
+/* Project description */
+
+.project-card > p {
+    position: relative;
+
+    max-width: 520px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    opacity: 0.72;
+
+    transform: translateZ(15px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s ease;
+}
+
+.project-card:hover > p {
+    opacity: 0.95;
+
+    transform:
+        translateZ(20px)
+        translateX(4px);
+}
+
+
+/* Project features */
+
+.project-features {
+    position: relative;
+
+    margin: 28px 0 30px;
+
+    padding-left: 18px;
+
+    list-style: none;
+}
+
+.project-features li {
+    position: relative;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    opacity: 0.68;
+
+    transform: translateX(0);
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.project-features li::before {
+    content: "—";
+
+    position: absolute;
+
+    left: -18px;
+
+    opacity: 0.45;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.project-card:hover .project-features li {
+    opacity: 0.9;
+}
+
+.project-card:hover .project-features li::before {
+    transform: translateX(4px);
+
+    opacity: 0.8;
+}
+
+.project-card:hover .project-features li:nth-child(1) {
+    transform: translateX(3px);
+}
+
+.project-card:hover .project-features li:nth-child(2) {
+    transform: translateX(6px);
+}
+
+.project-card:hover .project-features li:nth-child(3) {
+    transform: translateX(9px);
+}
+
+.project-card:hover .project-features li:nth-child(4) {
+    transform: translateX(12px);
+}
+
+
+/* Technology area + tags */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    transform: translateZ(20px);
+}
+
+.project-tech span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 12px;
+
+    border: 1px solid rgba(31, 26, 23, 0.13);
+
+    border-radius: 30px;
+
+    background: rgba(31, 26, 23, 0.025);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+    transition:
+        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.project-tech span:hover {
+    transform: translateY(-5px);
+
+    background: #1f1a17;
+
+    color: #f5f0e8;
+
+    border-color: #1f1a17;
+}
+
+.project-card:hover .project-tech span:nth-child(1) {
+    transform: translateY(-4px);
+}
+
+.project-card:hover .project-tech span:nth-child(2) {
+    transform: translateY(-6px);
+}
+
+.project-card:hover .project-tech span:nth-child(3) {
+    transform: translateY(-4px);
+}
+
+.project-card:hover .project-tech span:nth-child(4) {
+    transform: translateY(-7px);
+}
+
+
+/* Card reveal */
+
+.projects.visible .project-card {
+    animation:
+        premiumProjectReveal
+        0.9s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+.projects.visible .project-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.projects.visible .project-card:nth-child(2) {
+    animation-delay: 0.18s;
+}
+
+.projects.visible .project-card:nth-child(3) {
+    animation-delay: 0.31s;
+}
+
+.projects.visible .project-card:nth-child(4) {
+    animation-delay: 0.44s;
+}
+
+@keyframes premiumProjectReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(60px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* Project section label */
+
+.projects.visible .section-label {
+    animation:
+        projectLabelReveal
+        0.8s
+        ease-out
+        both;
+}
+
+@keyframes projectLabelReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* Grid spacing */
+
+.projects-grid {
+    gap: 30px;
+}
+
+
+/* Desktop card variation */
+
+@media (min-width: 1000px) {
+
+    .project-card:nth-child(2) {
+        transform: translateY(25px);
+    }
+
+    .project-card:nth-child(2):hover {
+        transform:
+            translateY(10px)
+            rotateX(1deg)
+            rotateY(-1deg);
+    }
+
+    .project-card:nth-child(4) {
+        transform: translateY(25px);
+    }
+
+    .project-card:nth-child(4):hover {
+        transform:
+            translateY(10px)
+            rotateX(1deg)
+            rotateY(-1deg);
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .project-card {
+        min-height: 390px;
+
+        padding: 34px 30px;
+    }
+
+    .project-card h3 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .projects-grid {
+        gap: 22px;
+    }
+
+    .project-card {
+        min-height: auto;
+
+        padding: 32px 25px;
+
+        transform: none !important;
+    }
+
+    .project-card:hover {
+        transform: translateY(-7px) !important;
+    }
+
+    .project-card h3 {
+        font-size: 26px;
+
+        transform: none;
+    }
+
+    .project-card:hover h3 {
+        transform: translateX(4px);
+    }
+
+    .project-features {
+        margin-top: 22px;
+    }
+
+    .project-tech {
+        padding-top: 20px;
+    }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+    .project-card {
+        padding: 28px 22px;
+    }
+
+    .project-number {
+        margin-bottom: 22px;
+    }
+
+    .project-card h3 {
+        font-size: 23px;
+    }
+
+    .project-card > p {
+        font-size: 14px;
+    }
+
+    .project-features li {
+        font-size: 12px;
+    }
+
+    .project-tech {
+        gap: 7px;
+    }
+
+    .project-tech span {
+        padding: 6px 10px;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-card,
+    .project-card::before,
+    .project-card::after,
+    .project-number,
+    .project-card h3,
+    .project-card > p,
+    .project-features li,
+    .project-tech span {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHASE 4 — PREMIUM NAVBAR + NAVIGATION POLISH
+========================================================= */
+
+nav {
+    transition:
+        background 0.4s ease,
+        backdrop-filter 0.4s ease,
+        box-shadow 0.4s ease,
+        padding 0.4s ease;
+}
+
+nav a {
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 1px;
+
+    background: currentColor;
+
+    transform: translateX(-50%);
+
+    transition:
+        width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.65;
+
+    letter-spacing: 0.3px;
+}
+
+nav a.active {
+    opacity: 1;
+
+    font-weight: 600;
+}
+
+nav a.active::before {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+    left: 50%;
+    bottom: -13px;
+
+    transform: translateX(-50%) scale(1);
+
+    opacity: 0.7;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+nav a:not(.active)::before {
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    opacity: 0;
+}
+
+
+/* Navigation stagger */
+
+nav a:nth-child(1) {
+    transition-delay: 0s;
+}
+
+nav a:nth-child(2) {
+    transition-delay: 0.02s;
+}
+
+nav a:nth-child(3) {
+    transition-delay: 0.04s;
+}
+
+nav a:nth-child(4) {
+    transition-delay: 0.06s;
+}
+
+nav a:nth-child(5) {
+    transition-delay: 0.08s;
+}
+
+nav a:nth-child(6) {
+    transition-delay: 0.10s;
+}
+
+nav a:nth-child(7) {
+    transition-delay: 0.12s;
+}
+
+nav a:nth-child(8) {
+    transition-delay: 0.14s;
+}
+
+
+/* Navbar entry animation */
+
+nav {
+    animation:
+        navbarReveal
+        1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+@keyframes navbarReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Navbar link entry */
+
+nav a {
+    animation:
+        navLinkReveal
+        0.7s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+@keyframes navLinkReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    nav {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    nav a::after {
+        bottom: -5px;
+    }
+
+    nav a.active::before {
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    nav,
+    nav a,
+    nav a::after,
+    nav a::before {
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHASE 5 — EDUCATION + EXPERIENCE (PREMIUM TIMELINE)
+========================================================= */
+
+.education-content,
+.experience-content {
+    position: relative;
+}
+
+
+/* Education items */
+
+.education-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 45px;
+
+    padding: 35px 0 35px 35px;
+
+    border-bottom: 1px solid rgba(31, 26, 23, 0.12);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        padding-left 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Timeline dot */
+
+.education-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 191px;
+
+    top: 43px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #f5f0e8;
+
+    border: 2px solid #1f1a17;
+
+    z-index: 2;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.education-item:hover {
+    transform: translateX(8px);
+
+    padding-left: 45px;
+
+    border-color: rgba(31, 26, 23, 0.28);
+}
+
+.education-item:hover::before {
+    transform: scale(1.5);
+
+    background: #1f1a17;
+}
+
+.education-year {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+
+    padding-top: 5px;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.education-item:hover .education-year {
+    opacity: 1;
+
+    transform: translateX(4px);
+}
+
+.education-item h3 {
+    margin: 0 0 12px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.education-item:hover h3 {
+    transform: translateX(3px);
+}
+
+.education-item p {
+    margin: 6px 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    opacity: 0.68;
+}
+
+.education-item p:last-child {
+    opacity: 0.5;
+
+    font-size: 13px;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* Education reveal */
+
+.education-item {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+}
+
+.education.visible .education-item {
+    animation:
+        timelineItemReveal
+        0.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+.education.visible .education-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.education.visible .education-item:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.education.visible .education-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes timelineItemReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Experience items */
+
+.experience-item {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 45px;
+
+    padding: 35px 0 35px 35px;
+
+    border-bottom: 1px solid rgba(31, 26, 23, 0.12);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+        padding-left 0.4s ease;
+}
+
+.experience-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 191px;
+
+    top: 43px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #f5f0e8;
+
+    border: 2px solid #1f1a17;
+
+    z-index: 2;
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.experience-item:hover {
+    transform: translateX(8px);
+
+    padding-left: 45px;
+}
+
+.experience-item:hover::before {
+    transform: scale(1.5);
+
+    background: #1f1a17;
+}
+
+.experience-item h3 {
+    margin: 0 0 10px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+}
+
+.experience-item p {
+    margin: 0;
+
+    max-width: 720px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    opacity: 0.68;
+}
+
+
+/* Experience reveal */
+
+.experience-item {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+}
+
+.experience.visible .experience-item {
+    animation:
+        timelineItemReveal
+        0.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+.experience.visible .experience-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.experience.visible .experience-item:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.experience.visible .experience-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+
+/* =========================================================
+   PHASE 6 — CONTACT PREMIUM POLISH
+========================================================= */
+
+.contact-content {
+    position: relative;
+
+    max-width: 900px;
+}
+
+.contact-content h2 {
+    max-width: 800px;
+
+    font-size: clamp(
+        42px,
+        6vw,
+        88px
+    );
+
+    line-height: 0.98;
+
+    letter-spacing: -0.055em;
+
+    margin-bottom: 35px;
+
+    transition:
+        transform 0.6s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-content h2:hover {
+    transform: translateX(8px);
+}
+
+.contact-content > p {
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    opacity: 0.65;
+
+    margin-bottom: 45px;
+}
+
+.contact-links {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.contact-links a {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 120px;
+
+    padding: 14px 20px;
+
+    border: 1px solid rgba(31, 26, 23, 0.22);
+
+    border-radius: 999px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    overflow: hidden;
+
+    transition:
+        color 0.35s ease,
+        background 0.35s ease,
+        transform 0.35s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        border-color 0.35s ease;
+}
+
+.contact-links a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(31, 26, 23, 0.08);
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.55s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-links a:hover::before {
+    left: 120%;
+}
+
+.contact-links a:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(31, 26, 23, 0.55);
+
+    background: rgba(31, 26, 23, 0.04);
+}
+
+.contact-links a:active {
+    transform:
+        translateY(-2px)
+        scale(0.97);
+}
+
+
+/* Contact reveal */
+
+.contact-content {
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+}
+
+.contact.visible .contact-content {
+    animation:
+        contactReveal
+        1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+@keyframes contactReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(45px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+.contact.visible .contact-links a:nth-child(1) {
+    animation:
+        contactLinkReveal
+        0.7s
+        0.25s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+.contact.visible .contact-links a:nth-child(2) {
+    animation:
+        contactLinkReveal
+        0.7s
+        0.35s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+.contact.visible .contact-links a:nth-child(3) {
+    animation:
+        contactLinkReveal
+        0.7s
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+@keyframes contactLinkReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* Footer */
+
+.footer {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding:
+        35px 8%;
+
+    border-top:
+        1px solid rgba(31, 26, 23, 0.12);
+
+    overflow: hidden;
+}
+
+.footer p {
+    margin: 0;
+
+    font-size: 12px;
+
+    letter-spacing: 0.06em;
+
+    opacity: 0.5;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer p:hover {
+    opacity: 1;
+
+    transform: translateY(-2px);
+}
+
+.footer {
+    animation:
+        footerReveal
+        1s
+        0.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+@keyframes footerReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   PHASE 7 — RESPONSIVE / MOBILE FINAL POLISH
+========================================================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .education-item {
+        grid-template-columns:
+            130px 1fr;
+
+        gap: 30px;
+
+        padding-left: 30px;
+    }
+
+    .education-item::before {
+        left: 141px;
+    }
+
+    .experience-item {
+        grid-template-columns:
+            130px 1fr;
+
+        gap: 30px;
+
+        padding-left: 30px;
+    }
+
+    .experience-item::before {
+        left: 141px;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(
+            42px,
+            8vw,
+            70px
+        );
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    section {
+        min-height: auto;
+
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /* Education mobile */
+
+    .education-item {
+        display: block;
+
+        padding:
+            30px 0 30px 30px;
+
+        border-bottom:
+            1px solid rgba(
+                31,
+                26,
+                23,
+                0.12
+            );
+    }
+
+    .education-item::before {
+        left: 1px;
+
+        top: 36px;
+    }
+
+    .education-item:hover {
+        transform: translateX(4px);
+
+        padding-left: 34px;
+    }
+
+    .education-year {
+        margin-bottom: 14px;
+
+        font-size: 11px;
+    }
+
+    .education-item h3 {
+        font-size: 19px;
+
+        line-height: 1.3;
+    }
+
+    .education-item p {
+        font-size: 14px;
+    }
+
+    /* Experience mobile */
+
+    .experience-item {
+        display: block;
+
+        padding:
+            30px 0 30px 30px;
+
+        border-bottom:
+            1px solid rgba(
+                31,
+                26,
+                23,
+                0.12
+            );
+    }
+
+    .experience-item::before {
+        left: 1px;
+
+        top: 36px;
+    }
+
+    .experience-item:hover {
+        transform: translateX(4px);
+
+        padding-left: 34px;
+    }
+
+    .experience-item h3 {
+        font-size: 19px;
+
+        line-height: 1.3;
+    }
+
+    .experience-item p {
+        font-size: 14px;
+
+        line-height: 1.75;
+    }
+
+    /* Contact mobile */
+
+    .contact-content h2 {
+        font-size: clamp(
+            42px,
+            13vw,
+            68px
+        );
+
+        line-height: 0.98;
+    }
+
+    .contact-content > p {
+        font-size: 15px;
+
+        line-height: 1.75;
+
+        margin-bottom: 35px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 10px;
+    }
+
+    .contact-links a {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 15px 18px;
+    }
+
+    /* Footer mobile */
+
+    .footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        padding:
+            30px 6%;
+    }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+    section {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .education-item {
+        padding-left: 25px;
+    }
+
+    .education-item::before {
+        left: 0;
+    }
+
+    .experience-item {
+        padding-left: 25px;
+    }
+
+    .experience-item::before {
+        left: 0;
+    }
+
+    .contact-content h2 {
+        font-size:
+            clamp(
+                38px,
+                12vw,
+                55px
+            );
+    }
+
+    .contact-content > p {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 10px;
+
+        letter-spacing: 0.04em;
+    }
+
+}
+
+
+/* Touch devices: remove aggressive hover movement */
+
+@media (hover: none) {
+
+    .education-item:hover,
+    .experience-item:hover {
+        transform: none;
+
+        padding-left: 35px;
+    }
+
+    .education-item:hover::before,
+    .experience-item:hover::before {
+        transform: none;
+
+        background: #f5f0e8;
+    }
+
+    .contact-content h2:hover {
+        transform: none;
+    }
+
+    .contact-links a:hover {
+        transform: none;
+    }
+
+}
+
+
+/* Accessibility — focus states */
+
+nav a:focus-visible,
+.contact-links a:focus-visible {
+    outline: 2px solid currentColor;
+
+    outline-offset: 5px;
+
+    border-radius: 4px;
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .education-item,
+    .experience-item,
+    .contact-content,
+    .contact-links a,
+    .footer {
+        animation: none !important;
+
+        opacity: 1 !important;
+
+        transform: none !important;
+    }
+
+    .education-item:hover,
+    .experience-item:hover,
+    .contact-content h2:hover,
+    .contact-links a:hover {
+        transform: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   PHASE 8 — FINAL VISUAL / BACKGROUND SYSTEM
+   PREMIUM CINEMATIC ATMOSPHERE
+========================================================= */
+
+
+/* 01 — GLOBAL BACKGROUND FOUNDATION */
+
+html {
+    background: #f5f0e8;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f7f3ec 0%,
+            #f5f0e8 35%,
+            #f3eee5 70%,
+            #f7f3ec 100%
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* 02 — FINE ARCHITECTURAL GRID */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -10;
+
+    background-image:
+        linear-gradient(
+            rgba(31, 26, 23, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(31, 26, 23, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 90%
+        );
+}
+
+
+/* 03 — SUBTLE FILM GRAIN */
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    inset: -50%;
+
+    pointer-events: none;
+
+    z-index: -9;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+
+    animation:
+        grainMovement
+        0.25s
+        steps(2)
+        infinite;
+}
+
+@keyframes grainMovement {
+
+    0% {
+        transform:
+            translate(0, 0);
+    }
+
+    25% {
+        transform:
+            translate(-2%, 1%);
+    }
+
+    50% {
+        transform:
+            translate(1%, -2%);
+    }
+
+    75% {
+        transform:
+            translate(2%, 2%);
+    }
+
+    100% {
+        transform:
+            translate(0, 0);
+    }
+
+}
+
+
+/* 04 — SECTION ATMOSPHERE */
+
+section {
+    position: relative;
+
+    isolation: isolate;
+}
+
+
+/* 05 — SOFT SECTION LIGHT
+   (for the 8 content sections the class rules above win;
+   this is what styles the hero's ::after) */
+
+section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: 0.18;
+
+    filter: blur(90px);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(143, 111, 78, 0.14) 0%,
+            rgba(143, 111, 78, 0.05) 40%,
+            transparent 72%
+        );
+
+    transform:
+        translateZ(0);
+
+    animation:
+        ambientFloat
+        12s
+        ease-in-out
+        infinite alternate;
+}
+
+@keyframes ambientFloat {
+
+    from {
+        transform:
+            translate3d(-20px, -10px, 0)
+            scale(0.95);
+    }
+
+    to {
+        transform:
+            translate3d(20px, 15px, 0)
+            scale(1.05);
+    }
+
+}
+
+
+/* 07 — HERO LIGHT SOURCE */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -220px;
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(116, 82, 48, 0.10) 0%,
+            rgba(116, 82, 48, 0.035) 38%,
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        heroAmbient
+        9s
+        ease-in-out
+        infinite alternate;
+}
+
+@keyframes heroAmbient {
+
+    from {
+        transform:
+            translateY(-50%)
+            scale(0.95);
+    }
+
+    to {
+        transform:
+            translateY(-50%)
+            scale(1.08);
+    }
+
+}
+
+
+/* 08 — HERO GRID */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0.35;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            transparent 49.8%,
+            rgba(31, 26, 23, 0.025) 50%,
+            transparent 50.2%
+        );
+
+    background-size:
+        25% 100%;
+}
+
+
+/* 12 — SECTION LABEL ACCENT */
+
+.section-label {
+    position: relative;
+
+    display: inline-block;
+
+    letter-spacing: 0.16em;
+
+    transition:
+        letter-spacing 0.4s ease,
+        transform 0.4s ease;
+}
+
+.section-label:hover {
+    letter-spacing: 0.22em;
+
+    transform:
+        translateX(4px);
+}
+
+
+/* 13 — SECTION LABEL LINE */
+
+.section-label::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    margin-top: 12px;
+
+    background:
+        currentColor;
+
+    opacity: 0.35;
+
+    transition:
+        width 0.4s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.section-label:hover::after {
+    width: 65px;
+}
+
+
+/* 14–21 — SECTION ATMOSPHERES */
+
+.about {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.08),
+            transparent
+        );
+}
+
+.skills {
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(118, 84, 51, 0.025),
+            transparent
+        );
+}
+
+.tools {
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(118, 84, 51, 0.035),
+            transparent 35%
+        );
+}
+
+.services {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.12),
+            transparent 50%
+        );
+}
+
+.education {
+    background:
+        radial-gradient(
+            circle at 10% 60%,
+            rgba(118, 84, 51, 0.04),
+            transparent 32%
+        );
+}
+
+.projects {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(118, 84, 51, 0.025),
+            transparent 30%,
+            rgba(255, 255, 255, 0.08)
+        );
+}
+
+.experience {
+    background:
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(118, 84, 51, 0.04),
+            transparent 30%
+        );
+}
+
+.contact {
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(118, 84, 51, 0.07),
+            transparent 38%
+        );
+}
+
+
+/* 22 — PREMIUM HORIZONTAL LIGHT (contact) */
+
+.contact::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8%;
+    right: 8%;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(31, 26, 23, 0.15),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* 23 — PROJECT CARD GLASS DEPTH */
+
+.project-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.30),
+            rgba(255, 255, 255, 0.08)
+        );
+
+    backdrop-filter:
+        blur(4px);
+
+    -webkit-backdrop-filter:
+        blur(4px);
+}
+
+
+/* 24 — SKILL GROUP DEPTH */
+
+.skill-group {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.16),
+            transparent
+        );
+}
+
+
+/* 25 — TOOL FLOATING DEPTH */
+
+.tools-list span {
+    position: relative;
+
+    backdrop-filter:
+        blur(3px);
+
+    -webkit-backdrop-filter:
+        blur(3px);
+
+    transition:
+        transform 0.35s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.35s ease;
+}
+
+.tools-list span:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(31, 26, 23, 0.08);
+}
+
+
+/* 27 — CINEMATIC CONTENT LIGHT
+   (this is also what styles .education-content::before and
+   .experience-content::before — see conflicts note in the audit) */
+
+.about-content::before,
+.skills-content::before,
+.tools-content::before,
+.services-content::before,
+.education-content::before,
+.projects-content::before,
+.experience-content::before,
+.contact-content::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    left: -100px;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(118, 84, 51, 0.035),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* 29 — SCROLL DEPTH */
+
+.about,
+.skills,
+.tools,
+.services,
+.education,
+.projects,
+.experience,
+.contact {
+    transform:
+        translateZ(0);
+
+    will-change:
+        transform;
+}
+
+
+/* 30 — HERO VISUAL DEPTH */
+
+.hero-visual {
+    filter:
+        drop-shadow(
+            0 25px 50px
+            rgba(31, 26, 23, 0.08)
+        );
+}
+
+
+/* 33 — NAVBAR GLASS */
+
+nav {
+    background:
+        rgba(245, 240, 232, 0.45);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+}
+
+
+/* 34 — NAVBAR SCROLLED (class added by script.js) */
+
+nav.scrolled {
+    background:
+        rgba(245, 240, 232, 0.82);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(31, 26, 23, 0.07);
+}
+
+
+/* 35 — PREMIUM SELECTION */
+
+::selection {
+    background:
+        rgba(31, 26, 23, 0.14);
+
+    color:
+        #1f1a17;
+}
+
+
+/* 36 — SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background:
+        #f5f0e8;
+}
+
+::-webkit-scrollbar-thumb {
+    background:
+        rgba(31, 26, 23, 0.28);
+
+    border-radius:
+        999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:
+        rgba(31, 26, 23, 0.45);
+}
+
+
+/* 37 — MOBILE BACKGROUND SIMPLIFICATION */
+
+@media (max-width: 768px) {
+
+    body::before {
+        background-size:
+            55px 55px;
+
+        opacity:
+            0.6;
+    }
+
+    body::after {
+        opacity:
+            0.02;
+    }
+
+    section::after {
+        width:
+            300px;
+
+        height:
+            300px;
+
+        filter:
+            blur(70px);
+
+        opacity:
+            0.12;
+    }
+
+    .hero::before {
+        width:
+            400px;
+
+        height:
+            400px;
+
+        right:
+            -180px;
+    }
+
+    .hero::after {
+        opacity:
+            0.18;
+    }
+
+}
+
+
+/* 38 — SMALL MOBILE PERFORMANCE */
+
+@media (max-width: 480px) {
+
+    body::before {
+        opacity:
+            0.35;
+    }
+
+    body::after {
+        display:
+            none;
+    }
+
+    section::after {
+        opacity:
+            0.08;
+
+        filter:
+            blur(60px);
+    }
+
+    .hero::before {
+        opacity:
+            0.7;
+    }
+
+}
+
+
+/* 39 — REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body::after,
+    section::after,
+    .hero::before {
+        animation:
+            none !important;
+    }
+
+}
+
+
+/* 40 — FINAL VISUAL STABILITY */
+
+img,
+video,
+canvas {
+    max-width:
+        100%;
+}
+
+video {
+    display:
+        block;
+}
+
+
+/* =========================================================
+   PHASE 8 — FINAL AMBIENT CIRCLES (size / position per section)
+========================================================= */
+
+.about::after,
+.skills::after,
+.tools::after,
+.services::after,
+.education::after,
+.projects::after,
+.experience::after,
+.contact::after {
+    width: 420px;
+    height: 420px;
+
+    opacity: 0.12;
+
+    filter: blur(90px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.about::after {
+    left: -180px;
+    top: 20%;
+}
+
+.skills::after {
+    right: -180px;
+    top: 30%;
+}
+
+.tools::after {
+    left: 20%;
+    top: 10%;
+}
+
+.services::after {
+    right: 10%;
+    top: 40%;
+}
+
+.education::after {
+    left: -160px;
+    top: 35%;
+}
+
+.projects::after {
+    right: -160px;
+    top: 20%;
+}
+
+.experience::after {
+    left: -160px;
+    top: 30%;
+}
+
+.contact::after {
+    right: -120px;
+    top: 15%;
+}
+
+
+/* Keep the actual content above the circles */
+
+.about-content,
+.skills-content,
+.tools-content,
+.services-content,
+.education-content,
+.projects-content,
+.experience-content,
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO — FIX TEXT HIDING BEHIND VISUAL
+========================================================= */
+
+.hero-visual {
+    pointer-events: none;
+}
+
+.hero h1 {
+    position: relative;
+
+    z-index: 25 !important;
+}
+
+.hero-description,
+.hero-status,
+.hero-buttons,
+.hero-label {
+    position: relative;
+
+    z-index: 25 !important;
+}
+
+@media (min-width: 901px) {
+
+    .hero-content {
+        max-width: 58% !important;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        max-width: 100% !important;
+    }
+
+    .hero-visual {
+        margin:
+            55px auto 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero-visual {
+        width: 320px !important;
+        height: 300px !important;
+
+        margin-top:
+            45px !important;
+    }
+
+}
+
+
+/* =========================================================
+   PREMIUM CINEMATIC HERO
+   MotionSites-inspired adaptation
+   Django / HTML / CSS version
+========================================================= */
+
+
+/* HERO FOUNDATION */
+
+.premium-hero {
+    position: relative !important;
+
+    min-height: 100vh !important;
+    height: 100vh;
+
+    width: 100%;
+
+    overflow: hidden !important;
+
+    display: flex;
+
+    align-items: stretch;
+
+    background: #050505 !important;
+
+    color: #ffffff;
+
+    isolation: isolate;
+
+    padding: 0 !important;
+}
+
+
+/* BACKGROUND VIDEO */
+
+.hero-video-layer {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: -5;
+
+    background: #000;
+}
+
+
+.hero-background-video {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 70%;
+
+    transform:
+        translateY(17%)
+        scale(1.18);
+
+    transform-origin: center;
+
+    opacity: 0;
+
+    will-change:
+        opacity,
+        transform;
+
+    filter:
+        brightness(0.58)
+        contrast(1.08)
+        saturate(0.78);
+
+    pointer-events: none;
+}
+
+
+/* CINEMATIC VIDEO OVERLAY */
+
+.hero-video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.68) 32%,
+            rgba(0, 0, 0, 0.38) 62%,
+            rgba(0, 0, 0, 0.68) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* VIGNETTE */
+
+.hero-video-vignette {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 25%,
+            rgba(0, 0, 0, 0.28) 65%,
+            rgba(0, 0, 0, 0.82) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* HERO INNER LAYOUT */
+
+.premium-hero .hero-inner {
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding:
+        130px 7% 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(420px, 0.95fr);
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* LEFT CONTENT */
+
+.premium-hero .hero-content {
+    position: relative !important;
+
+    z-index: 30 !important;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    margin: 0;
+
+    padding: 0;
+
+    opacity: 1 !important;
+
+    animation:
+        premiumHeroContent
+        1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+}
+
+
+@keyframes premiumHeroContent {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(45px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* LABEL */
+
+.premium-hero .hero-label {
+    position: relative;
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 26px;
+
+    color:
+        rgba(255, 255, 255, 0.66);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.18em;
+
+    line-height: 1.6;
+
+    text-transform: uppercase;
+}
+
+.premium-hero .hero-label span {
+    opacity: 0.45;
+}
+
+
+/* MAIN HEADING */
+
+.premium-hero h1 {
+    position: relative;
+
+    z-index: 35;
+
+    margin: 0 0 28px;
+
+    max-width: 760px;
+
+    color: #ffffff;
+
+    font-family:
+        "Instrument Serif",
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            68px,
+            8vw,
+            125px
+        );
+
+    font-weight: 400;
+
+    line-height: 0.84;
+
+    letter-spacing: -0.045em;
+
+    white-space: normal;
+
+    text-shadow:
+        0 10px 45px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+/* DESCRIPTION */
+
+.premium-hero .hero-description {
+    position: relative;
+
+    z-index: 30;
+
+    max-width: 590px;
+
+    margin: 0 0 20px;
+
+    color:
+        rgba(255, 255, 255, 0.74);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+/* STATUS */
+
+.premium-hero .hero-status {
+    position: relative;
+
+    z-index: 30;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0 0 32px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+
+    letter-spacing: 0.03em;
+}
+
+
+.status-dot {
+    color: #ffffff;
+
+    font-size: 10px;
+
+    animation:
+        statusPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* BUTTONS */
+
+.premium-hero .hero-buttons {
+    position: relative;
+
+    z-index: 40;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0;
+}
+
+
+.premium-hero .hero-buttons .btn {
+    position: relative;
+
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        13px 21px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.03em;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s
+        cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* Primary */
+
+.premium-hero .primary-btn {
+    background: #ffffff;
+
+    color: #080808;
+
+    border: 1px solid #ffffff;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* Secondary */
+
+.premium-hero .secondary-btn {
+    color: #ffffff;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+}
+
+
+.premium-hero .hero-buttons .btn:hover {
+    transform:
+        translateY(-4px);
+}
+
+
+.premium-hero .primary-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.88);
+}
+
+
+.premium-hero .secondary-btn:hover {
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-color:
+        rgba(255, 255, 255, 0.35);
+}
+
+
+/* RIGHT HERO VISUAL */
+
+.premium-hero .hero-visual {
+    position: relative !important;
+
+    z-index: 15 !important;
+
+    width: min(520px, 100%);
+
+    height: 520px;
+
+    margin: 0 auto;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+
+    transform: none !important;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    isolation: isolate;
+}
+
+
+/* LIQUID GLASS */
+
+.premium-hero .liquid-glass {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    background-blend-mode:
+        luminosity;
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+
+    border: none;
+
+    box-shadow:
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.14),
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+.premium-hero .liquid-glass::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    padding: 1.4px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.45) 0%,
+            rgba(255, 255, 255, 0.15) 20%,
+            rgba(255, 255, 255, 0) 40%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0.15) 80%,
+            rgba(255, 255, 255, 0.45) 100%
+        );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:
+        xor;
+
+    mask-composite:
+        exclude;
+
+    pointer-events: none;
+
+    z-index: 5;
+}
+
+
+/* CODE CARD */
+
+.premium-hero .hero-code-card {
+    position: absolute !important;
+
+    z-index: 20 !important;
+
+    width: min(430px, 90%);
+
+    min-height: 320px;
+
+    padding: 24px 25px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(12, 10, 9, 0.48);
+
+    color: #ffffff;
+
+    transform:
+        translate(0, 0);
+
+    animation:
+        codeCardFloat
+        7s
+        ease-in-out
+        infinite;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+@keyframes codeCardFloat {
+
+    0%,
+    100% {
+        transform:
+            translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform:
+            translate3d(0, -10px, 0);
+    }
+
+}
+
+
+/* CODE TOP */
+
+.premium-hero .code-top {
+    display: flex;
+
+    gap: 7px;
+
+    margin-bottom: 26px;
+}
+
+
+.premium-hero .code-top span {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.48);
+}
+
+
+/* CODE CONTENT */
+
+.premium-hero .code-content {
+    position: relative;
+
+    z-index: 10;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 2.15;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+}
+
+
+.premium-hero .code-content p {
+    margin: 0;
+
+    white-space: nowrap;
+}
+
+
+.premium-hero .code-content p span {
+    color:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+.premium-hero .code-content b {
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    font-weight: 600;
+}
+
+
+.premium-hero .code-key {
+    display: inline-block;
+
+    min-width: 82px;
+
+    color:
+        rgba(255, 255, 255, 0.42) !important;
+}
+
+
+/* FLOATING TECHNOLOGY GLASS
+   (position, colors and stacking are finalised in the
+   "HERO FLOATING TECHNOLOGY TAGS" blocks at the very bottom) */
+
+.premium-hero .floating-tech {
+    position: absolute !important;
+
+    z-index: 40 !important;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding:
+        10px 17px;
+
+    border-radius: 999px;
+
+    color:
+        rgba(255, 255, 255, 0.86);
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        inset 0 1px 1px
+        rgba(255, 255, 255, 0.10),
+
+        0 15px 35px
+        rgba(0, 0, 0, 0.22);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+
+    pointer-events: none;
+}
+
+
+/* ORBITS */
+
+.premium-hero .hero-orbit {
+    position: absolute;
+
+    z-index: 1;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: 0.8;
+}
+
+
+.premium-hero .orbit-one {
+    width: 430px;
+    height: 430px;
+
+    transform:
+        rotate(-18deg);
+
+    animation:
+        orbitRotateOne
+        24s
+        linear
+        infinite;
+}
+
+
+.premium-hero .orbit-two {
+    width: 340px;
+    height: 480px;
+
+    transform:
+        rotate(35deg);
+
+    animation:
+        orbitRotateTwo
+        28s
+        linear
+        infinite;
+}
+
+
+@keyframes orbitRotateOne {
+
+    from {
+        transform:
+            rotate(-18deg);
+    }
+
+    to {
+        transform:
+            rotate(342deg);
+    }
+
+}
+
+
+@keyframes orbitRotateTwo {
+
+    from {
+        transform:
+            rotate(35deg);
+    }
+
+    to {
+        transform:
+            rotate(-325deg);
+    }
+
+}
+
+
+/* GLASS STATUS */
+
+.premium-hero .hero-glass-status {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: -15px;
+
+    z-index: 50;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        9px 15px;
+
+    border-radius: 999px;
+
+    color:
+        rgba(255, 255, 255, 0.64);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.15em;
+
+    white-space: nowrap;
+}
+
+
+.premium-hero .hero-glass-status span {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 12px
+        rgba(255, 255, 255, 0.8);
+
+    animation:
+        statusPulse
+        2s
+        ease-in-out
+        infinite;
+}
+
+
+/* SCROLL INDICATOR */
+
+.premium-hero .hero-scroll-indicator {
+    position: absolute;
+
+    z-index: 30;
+
+    left: 7%;
+
+    bottom: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    color:
+        rgba(255, 255, 255, 0.42);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.16em;
+}
+
+
+.premium-hero .scroll-line {
+    width: 45px;
+
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.38);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .premium-hero .hero-inner {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(360px, 0.8fr);
+
+        padding-left: 6%;
+        padding-right: 6%;
+
+        gap: 20px;
+    }
+
+    .premium-hero h1 {
+        font-size:
+            clamp(
+                62px,
+                8vw,
+                95px
+            );
+    }
+
+}
+
+
+/* SMALL LAPTOP / TABLET */
+
+@media (max-width: 900px) {
+
+    .premium-hero {
+        min-height: 100svh !important;
+
+        height: auto;
+
+        overflow: hidden !important;
+    }
+
+    .premium-hero .hero-inner {
+        min-height: 100svh;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            auto auto;
+
+        justify-items: center;
+
+        text-align: center;
+
+        padding:
+            125px 6% 100px;
+
+        gap: 30px;
+    }
+
+    .premium-hero .hero-content {
+        max-width: 720px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .premium-hero .hero-label {
+        justify-content: center;
+    }
+
+    .premium-hero .hero-description {
+        text-align: center;
+    }
+
+    .premium-hero .hero-status {
+        justify-content: center;
+    }
+
+    .premium-hero .hero-buttons {
+        justify-content: center;
+    }
+
+    .premium-hero .hero-visual {
+        width: 440px;
+        height: 420px;
+    }
+
+    .premium-hero .hero-scroll-indicator {
+        display: none;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .premium-hero .hero-inner {
+        padding:
+            110px 20px 70px;
+
+        gap: 15px;
+    }
+
+    .premium-hero h1 {
+        font-size:
+            clamp(
+                58px,
+                17vw,
+                82px
+            );
+
+        line-height: 0.86;
+    }
+
+    .premium-hero .hero-label {
+        max-width: 350px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.13em;
+    }
+
+    .premium-hero .hero-description {
+        font-size: 14px;
+
+        max-width: 350px;
+    }
+
+    .premium-hero .hero-buttons {
+        width: 100%;
+
+        max-width: 360px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .premium-hero .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .premium-hero .hero-code-card {
+        width: 300px;
+
+        min-height: 260px;
+
+        padding: 20px;
+    }
+
+    .premium-hero .code-content {
+        font-size: 9px;
+
+        line-height: 2;
+    }
+
+    .premium-hero .code-key {
+        min-width: 62px;
+    }
+
+    .premium-hero .floating-tech {
+        padding:
+            8px 12px;
+
+        font-size: 7px;
+    }
+
+    .premium-hero .orbit-one {
+        width: 320px;
+        height: 320px;
+    }
+
+    .premium-hero .orbit-two {
+        width: 260px;
+        height: 350px;
+    }
+
+    .premium-hero .hero-glass-status {
+        bottom: -8px;
+    }
+
+}
+
+
+/* SMALL PHONE */
+
+@media (max-width: 400px) {
+
+    .premium-hero .hero-inner {
+        padding:
+            105px 15px 60px;
+    }
+
+    .premium-hero h1 {
+        font-size:
+            55px;
+    }
+
+    .premium-hero .hero-code-card {
+        width: 270px;
+
+        min-height: 240px;
+    }
+
+    .premium-hero .code-content {
+        font-size: 8px;
+    }
+
+    .premium-hero .floating-tech {
+        padding:
+            7px 10px;
+    }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .premium-hero .hero-code-card,
+    .premium-hero .floating-tech,
+    .premium-hero .hero-orbit,
+    .premium-hero .hero-glass-status span,
+    .premium-hero .status-dot {
+        animation: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   HERO — DESKTOP VISUAL SIZE
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .premium-hero .hero-visual {
+        width: 520px !important;
+        height: 520px !important;
+    }
+
+}
+
+
+/* =========================================================
+   HERO — VIDEO BRIGHTNESS
+   (the video was too dark, this overrides the earlier filter)
+========================================================= */
+
+.premium-hero video {
+    filter:
+        brightness(1.35)
+        contrast(1.02)
+        saturate(1.05) !important;
+
+    mix-blend-mode: normal !important;
+}
+
+.premium-hero .hero-video-overlay {
+    opacity: 0.35 !important;
+}
+
+
+/* =========================================================
+   HERO — TECH TAG STYLE (final)
+========================================================= */
+
+.hero-visual .tech-python,
+.hero-visual .tech-django,
+.hero-visual .tech-react,
+.hero-visual .tech-sql {
+    background: rgba(15, 15, 15, 0.72) !important;
+
+    color: #fff !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12) !important;
+
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+
+/* =========================================================
+   HERO FLOATING TECHNOLOGY TAGS — FINAL POSITION
+   (this is the LAST word on tag position and stacking)
+========================================================= */
+
+/* Make sure all four tags use absolute positioning */
+.hero-visual .floating-tech {
+    position: absolute !important;
+    z-index: 100 !important;
+    transform: none !important;
+    margin: 0 !important;
+}
+
+/* PYTHON — upper left of the code card */
+.hero-visual .floating-tech.tech-python {
+    top: 85px !important;
+    left: 20px !important;
+}
+
+/* DJANGO — upper right of the code card */
+.hero-visual .floating-tech.tech-django {
+    top: 125px !important;
+    right: 15px !important;
+}
+
+/* REACT — lower left of the code card */
+.hero-visual .floating-tech.tech-react {
+    bottom: 125px !important;
+    left: 15px !important;
+}
+
+/* SQL — lower right of the code card */
+.hero-visual .floating-tech.tech-sql {
+    bottom: 70px !important;
+    right: 25px !important;
+}
+
+
+/* Keep the code card above the orbit but below the tech tags */
+.hero-visual .hero-code-card {
+    position: absolute !important;
+    z-index: 50 !important;
+}
+
+
+
+/* =========================================================
+   HERO — TECH TAGS ARRANGED AROUND THE CODE CARD
+   Card box = starts at 50% / 50% of .hero-visual, size --card-w x --card-h
+   ========================================================= */
+
+.hero-visual {
+    --card-w: min(430px, 90%);
+    --card-h: 320px;
+    --card-x: 50%;
+    --card-y: 50%;
+}
+
+@media (max-width: 600px) {
+    .hero-visual { --card-w: 300px; --card-h: 260px; }
+}
+
+@media (max-width: 400px) {
+    .hero-visual { --card-w: 270px; --card-h: 240px; }
+}
+
+/* PYTHON — top edge, left side */
+.hero-visual .floating-tech.tech-python {
+    left: calc(var(--card-x) + var(--card-w) * 0.22) !important;
+    top: var(--card-y) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* DJANGO — right edge, upper part */
+.hero-visual .floating-tech.tech-django {
+    left: calc(var(--card-x) + var(--card-w)) !important;
+    top: calc(var(--card-y) + var(--card-h) * 0.24) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* REACT — left edge, lower part (nudged outward so it doesn't touch the text) */
+.hero-visual .floating-tech.tech-react {
+    left: calc(var(--card-x) - 14px) !important;
+    top: calc(var(--card-y) + var(--card-h) * 0.62) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* SQL — bottom edge, right side */
+.hero-visual .floating-tech.tech-sql {
+    left: calc(var(--card-x) + var(--card-w) * 0.78) !important;
+    top: calc(var(--card-y) + var(--card-h)) !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* BUILDING WITH CODE pill — bottom edge, left side */
+.hero-visual .hero-glass-status {
+    left: calc(var(--card-x) + var(--card-w) * 0.30);
+    top: calc(var(--card-y) + var(--card-h));
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 900px) {
+    .hero-visual {
+        --card-x: calc(50% - var(--card-w) / 2);
+        --card-y: calc(50% - var(--card-h) / 2);
+    }
+
+    .hero-visual .hero-code-card {
+        left: var(--card-x);
+        top: var(--card-y);
+    }
+}
+
+
+/* =========================================================
+   HERO — TEXT COLORS (colors only; no size/font/layout changes)
+   ========================================================= */
+
+.premium-hero h1 {
+    color: #FBF6EA;
+}
+
+.premium-hero .hero-label {
+    color: #F2C46B;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6);
+}
+
+.premium-hero .hero-description {
+    color: rgba(246, 239, 224, 0.9);
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6);
+}
+
+.premium-hero .hero-status {
+    color: rgba(246, 239, 224, 0.95);
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.6);
+}
+
+.premium-hero .status-dot {
+    color: #F2C46B;
+}
+
+.premium-hero .secondary-btn {
+    color: #FBF6EA;
+}
+
+/* Code card */
+.premium-hero .code-content {
+    color: #F6EFE0;
+}
+
+.premium-hero .code-content p span {
+    color: rgba(242, 196, 107, 0.8);
+    opacity: 0.9;
+}
+
+.premium-hero .code-content b {
+    color: #F2C46B;
+}
+
+.premium-hero .code-content .code-key {
+    color: #9CC4FF !important;
+    opacity: 1;
+}
+
+/* Tags, status pill, scroll indicator */
+.hero-visual .floating-tech {
+    color: #F6EFE0 !important;
+}
+
+.premium-hero .hero-glass-status {
+    color: rgba(246, 239, 224, 0.9);
+}
+
+.premium-hero .hero-scroll-indicator {
+    color: rgba(246, 239, 224, 0.7);
+}
+
+
+/* ==========================================
+   WHAT I BUILD — SLOW CINEMATIC ANIMATION
+========================================== */
+
+.service-item {
+    opacity: 0;
+    transform: translateX(-120px) scale(0.94);
+
+    transition:
+        opacity 1.3s ease,
+        transform 1.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.5s ease,
+        background 0.5s ease;
+}
+
+
+/* Scroll reveal */
+
+.services.visible .service-item {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+
+/* Slow stagger */
+
+.services.visible .service-item:nth-child(1) {
+    transition-delay: 0.15s;
+}
+
+.services.visible .service-item:nth-child(2) {
+    transition-delay: 0.45s;
+}
+
+.services.visible .service-item:nth-child(3) {
+    transition-delay: 0.75s;
+}
+
+.services.visible .service-item:nth-child(4) {
+    transition-delay: 1.05s;
+}
+
+
+/* ==========================================
+   HOVER — CARD GROWS + LIFTS
+========================================== */
+
+@media (hover: hover) {
+
+    .service-item {
+        transform-origin: center center;
+    }
+
+    .service-item:hover {
+        transform: translateY(-12px) scale(1.06);
+
+        background: rgba(245, 240, 232, 0.9);
+
+        box-shadow:
+            0 25px 50px rgba(31, 26, 23, 0.12);
+
+        z-index: 10;
+    }
+
+    .service-item:hover h3 {
+        transform: translateX(6px);
+    }
+
+    .service-item h3 {
+        transition:
+            transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .service-item:hover p {
+        opacity: 0.9;
+    }
+
+    .service-item p {
+        transition:
+            opacity 0.4s ease;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .service-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+
+
+.global-bg-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -8;
+    pointer-events: none;
+    filter: brightness(0.7);
+}
+
+html {
+    background: #0b0b0d;
+}
+
+body {
+    background: transparent;
+}
+
+.about, .skills, .tools, .services, .education,
+.projects, .experience, .contact, .footer {
+    color: #f3ede0;
+}
+
+
+
+nav {
+    background: rgba(11, 11, 13, 0.45) !important;
+}
+
+nav.scrolled {
+    background: rgba(11, 11, 13, 0.75) !important;
+}
+
+nav a {
+    color: #f3ede0 !important;
+}
+
+
+/* =========================================================
+   PREMIUM WARM CINEMATIC TEXT THEME
+   Applies to all sections EXCEPT HERO + NAVBAR
+   ========================================================= */
+
+/* ---------- COLOR SYSTEM ---------- */
+
+:root {
+    --cinema-white: #fff7e8;
+    --cinema-ivory: #f3e6cf;
+    --cinema-soft: #d8c6a9;
+    --cinema-muted: #b9a98f;
+    --cinema-gold: #d6b77c;
+    --cinema-gold-bright: #e5c98d;
+    --cinema-line: rgba(229, 201, 141, 0.28);
+    --cinema-glass: rgba(16, 15, 13, 0.58);
+}
+
+
+/* =========================================================
+   GLOBAL SECTION TEXT
+   ========================================================= */
+
+.about,
+.skills,
+.tools,
+.services,
+.education,
+.projects,
+.experience,
+.contact {
+    color: var(--cinema-ivory);
+}
+
+
+/* ---------- MAIN HEADINGS ---------- */
+
+.about h2,
+.skills h2,
+.tools h2,
+.services h2,
+.education h2,
+.projects h2,
+.experience h2,
+.contact h2 {
+
+    color: var(--cinema-white) !important;
+
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.55),
+        0 0 30px rgba(214, 183, 124, 0.08);
+
+    transition:
+        color 0.5s ease,
+        text-shadow 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+/* ---------- PARAGRAPHS ---------- */
+
+.about p,
+.skills p,
+.tools p,
+.services p,
+.education p,
+.projects p,
+.experience p,
+.contact p {
+
+    color: var(--cinema-soft) !important;
+
+    text-shadow:
+        0 1px 7px rgba(0, 0, 0, 0.55);
+
+    transition:
+        color 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+/* ---------- SECTION LABELS ---------- */
+
+.about .section-label,
+.skills .section-label,
+.tools .section-label,
+.services .section-label,
+.education .section-label,
+.projects .section-label,
+.experience .section-label,
+.contact .section-label {
+
+    color: var(--cinema-gold) !important;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 1px 8px rgba(0, 0, 0, 0.6);
+
+}
+
+
+/* =========================================================
+   SECTION HEADING HOVER
+   ========================================================= */
+
+.about h2:hover,
+.skills h2:hover,
+.tools h2:hover,
+.services h2:hover,
+.education h2:hover,
+.projects h2:hover,
+.experience h2:hover,
+.contact h2:hover {
+
+    color: var(--cinema-gold-bright) !important;
+
+    text-shadow:
+        0 0 20px rgba(214, 183, 124, 0.28),
+        0 3px 18px rgba(0, 0, 0, 0.65);
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.skill-group {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20, 18, 15, 0.68),
+            rgba(45, 37, 27, 0.46)
+        ) !important;
+
+    border: 1px solid rgba(214, 183, 124, 0.25) !important;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 247, 232, 0.06);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.5s cubic-bezier(.22,1,.36,1),
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* Skill category titles */
+
+.skill-group h3,
+.skill-group > h3 {
+
+    color: var(--cinema-gold-bright) !important;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Skill tags */
+
+.skill-group span,
+.skills .skill-tag {
+
+    color: var(--cinema-ivory) !important;
+
+    background:
+        rgba(255, 247, 232, 0.035);
+
+    border: 1px solid rgba(214, 183, 124, 0.28);
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Skill hover */
+
+@media (hover:hover) {
+
+    .skill-group:hover {
+
+        transform: translateY(-6px);
+
+        border-color:
+            rgba(214, 183, 124, 0.48) !important;
+
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.38),
+            0 0 30px rgba(214, 183, 124, 0.07);
+    }
+
+    .skill-group span:hover,
+    .skills .skill-tag:hover {
+
+        color: #fffaf0 !important;
+
+        background:
+            rgba(214, 183, 124, 0.13);
+
+        border-color:
+            rgba(229, 201, 141, 0.65);
+
+        transform: translateY(-3px);
+
+        box-shadow:
+            0 5px 18px rgba(0, 0, 0, 0.25),
+            0 0 15px rgba(214, 183, 124, 0.10);
+    }
+}
+
+
+/* =========================================================
+   SERVICES / WHAT I BUILD
+   ========================================================= */
+
+.service-item {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 17, 14, 0.65),
+            rgba(48, 39, 28, 0.42)
+        ) !important;
+
+    border-color:
+        rgba(214, 183, 124, 0.22) !important;
+
+    color: var(--cinema-ivory) !important;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition:
+        transform 0.6s cubic-bezier(.22,1,.36,1),
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.service-item h3 {
+
+    color: var(--cinema-white) !important;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+
+.service-item p {
+
+    color: var(--cinema-soft) !important;
+}
+
+
+/* Service number */
+
+.service-item > span {
+
+    color: var(--cinema-gold) !important;
+}
+
+
+/* Service hover */
+
+@media (hover:hover) {
+
+    .service-item:hover {
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(50, 40, 27, 0.88),
+                rgba(18, 16, 13, 0.82)
+            ) !important;
+
+        border-color:
+            rgba(229, 201, 141, 0.52) !important;
+
+        box-shadow:
+            0 30px 65px rgba(0, 0, 0, 0.45),
+            0 0 30px rgba(214, 183, 124, 0.08);
+
+        transform:
+            translateY(-10px) scale(1.025);
+    }
+
+    .service-item:hover h3 {
+
+        color:
+            var(--cinema-gold-bright) !important;
+    }
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+.education-item {
+
+    color: var(--cinema-ivory);
+
+    border-color:
+        rgba(214, 183, 124, 0.18) !important;
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.4s ease;
+}
+
+
+.education-item h3 {
+
+    color: var(--cinema-white) !important;
+
+    text-shadow:
+        0 2px 9px rgba(0, 0, 0, 0.6);
+}
+
+
+.education-item p {
+
+    color:
+        var(--cinema-soft) !important;
+}
+
+
+/* Education year */
+
+.education-item > span {
+
+    color:
+        var(--cinema-gold) !important;
+}
+
+
+/* Education dot */
+
+.education-item::before {
+
+    border-color:
+        var(--cinema-gold) !important;
+}
+
+
+.education-item:hover {
+
+    border-color:
+        rgba(229, 201, 141, 0.40) !important;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.project-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 16, 13, 0.70),
+            rgba(50, 40, 28, 0.42)
+        ) !important;
+
+    border:
+        1px solid rgba(214, 183, 124, 0.22) !important;
+
+    color:
+        var(--cinema-ivory) !important;
+
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+
+    box-shadow:
+        0 20px 55px rgba(0, 0, 0, 0.30),
+        inset 0 1px 0 rgba(255, 247, 232, 0.06);
+
+    transition:
+        transform 0.6s cubic-bezier(.22,1,.36,1),
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.project-card h3 {
+
+    color:
+        var(--cinema-white) !important;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+
+.project-card p {
+
+    color:
+        var(--cinema-soft) !important;
+}
+
+
+.project-card span,
+.project-card li {
+
+    color:
+        var(--cinema-muted) !important;
+}
+
+
+/* Project hover */
+
+@media (hover:hover) {
+
+    .project-card:hover {
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(54, 43, 29, 0.92),
+                rgba(18, 16, 13, 0.86)
+            ) !important;
+
+        border-color:
+            rgba(229, 201, 141, 0.55) !important;
+
+        box-shadow:
+            0 30px 75px rgba(0, 0, 0, 0.50),
+            0 0 35px rgba(214, 183, 124, 0.08);
+
+        transform:
+            translateY(-8px);
+    }
+
+    .project-card:hover h3 {
+
+        color:
+            var(--cinema-gold-bright) !important;
+    }
+
+    .project-card:hover p {
+
+        color:
+            var(--cinema-ivory) !important;
+    }
+}
+
+
+/* =========================================================
+   TOOLS
+   ========================================================= */
+
+.tools-list span {
+
+    color:
+        var(--cinema-ivory) !important;
+
+    background:
+        rgba(18, 16, 13, 0.42) !important;
+
+    border-color:
+        rgba(214, 183, 124, 0.25) !important;
+
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.tools-list span:hover {
+
+    color:
+        var(--cinema-gold-bright) !important;
+
+    border-color:
+        rgba(229, 201, 141, 0.60) !important;
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30),
+        0 0 18px rgba(214, 183, 124, 0.08);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+   ========================================================= */
+
+.experience-item {
+
+    color:
+        var(--cinema-ivory);
+
+    border-color:
+        rgba(214, 183, 124, 0.18) !important;
+}
+
+
+.experience-item h3 {
+
+    color:
+        var(--cinema-white) !important;
+}
+
+
+.experience-item p {
+
+    color:
+        var(--cinema-soft) !important;
+}
+
+
+.experience-item:hover {
+
+    border-color:
+        rgba(229, 201, 141, 0.40) !important;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact a {
+
+    color:
+        var(--cinema-ivory) !important;
+
+    transition:
+        color 0.35s ease,
+        text-shadow 0.35s ease;
+}
+
+
+.contact a:hover {
+
+    color:
+        var(--cinema-gold-bright) !important;
+
+    text-shadow:
+        0 0 18px rgba(214, 183, 124, 0.25);
+}
+
+
+/* =========================================================
+   GOLD ACCENT LINE
+   ========================================================= */
+
+.section-label::after {
+
+    background:
+        var(--cinema-gold) !important;
+
+    box-shadow:
+        0 0 10px rgba(214, 183, 124, 0.20);
+}
+
+
+/* =========================================================
+   SUBTLE TEXT REVEAL
+   ========================================================= */
+
+@keyframes cinematicTextGlow {
+
+    0% {
+        text-shadow:
+            0 2px 12px rgba(0, 0, 0, 0.55);
+    }
+
+    50% {
+        text-shadow:
+            0 2px 14px rgba(0, 0, 0, 0.55),
+            0 0 18px rgba(214, 183, 124, 0.08);
+    }
+
+    100% {
+        text-shadow:
+            0 2px 12px rgba(0, 0, 0, 0.55);
+    }
+}
+
+
+.skills-content h2,
+.services-content h2,
+.education-content h2,
+.projects-content h2 {
+
+    animation:
+        cinematicTextGlow 5s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .about h2,
+    .skills h2,
+    .tools h2,
+    .services h2,
+    .education h2,
+    .projects h2,
+    .experience h2,
+    .contact h2 {
+        text-shadow:
+            0 2px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    .skill-group,
+    .service-item,
+    .project-card {
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+}
+
+/* =========================================================
+   SECTION 02 — NEUMORPHIC SKILLS
+========================================================= */
+
+.neumorphic-skills {
+    position: relative;
+    color: #f5ead8;
+}
+
+
+/* ---------- SECTION HEADING ---------- */
+
+.neumorphic-skills .section-label {
+    color: #d8bd91 !important;
+    letter-spacing: 2px;
+}
+
+.neumorphic-skills h2 {
+    color: #fff8ec !important;
+
+    text-shadow:
+        0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+
+/* ---------- 4 CARD GRID ---------- */
+
+.neumorphic-skills-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 40px;
+
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   NEUMORPHIC CARD
+========================================================= */
+
+.neumorphic-skill-card {
+
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 35px;
+
+    border-radius: 28px;
+
+    /*
+       Semi-transparent warm surface.
+       Lets the mountain remain visible.
+    */
+    background:
+        rgba(210, 204, 193, 0.72);
+
+    /*
+       Neumorphic depth
+    */
+    box-shadow:
+
+        12px 12px 25px rgba(0, 0, 0, 0.30),
+
+        -10px -10px 25px rgba(255, 255, 255, 0.22),
+
+        inset 1px 1px 2px
+        rgba(255, 255, 255, 0.20);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.22);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition:
+        transform 0.45s cubic-bezier(.22, 1, .36, 1),
+        box-shadow 0.45s ease,
+        background 0.45s ease;
+}
+
+
+/* ---------- CARD NUMBER ---------- */
+
+.skill-card-number {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    color: #806b4d;
+}
+
+
+/* ---------- CARD TITLE ---------- */
+
+.neumorphic-skill-card h3 {
+
+    margin-bottom: 25px;
+
+    font-size: 1.35rem;
+
+    font-weight: 600;
+
+    color: #29251f !important;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* =========================================================
+   SKILL TAGS
+========================================================= */
+
+.skill-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+.skill-tags span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 9px 16px;
+
+    border-radius: 50px;
+
+    font-size: 0.82rem;
+
+    color: #40392f;
+
+    background: rgba(215, 210, 201, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    /*
+       Small neumorphic pill
+    */
+    box-shadow:
+
+        4px 4px 9px rgba(0, 0, 0, 0.18),
+
+        -3px -3px 8px
+        rgba(255, 255, 255, 0.30);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+    .neumorphic-skill-card:hover {
+
+        transform:
+            translateY(-8px);
+
+        background:
+            rgba(222, 217, 208, 0.80);
+
+        box-shadow:
+
+            18px 18px 35px
+            rgba(0, 0, 0, 0.34),
+
+            -14px -14px 30px
+            rgba(255, 255, 255, 0.25),
+
+            inset 1px 1px 3px
+            rgba(255, 255, 255, 0.25);
+    }
+
+
+    .neumorphic-skill-card:hover .skill-card-number {
+
+        color: #a27b42;
+    }
+
+
+    .skill-tags span:hover {
+
+        transform:
+            translateY(-3px);
+
+        color: #241f19;
+
+        box-shadow:
+
+            inset 3px 3px 7px
+            rgba(0, 0, 0, 0.14),
+
+            inset -3px -3px 7px
+            rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .neumorphic-skills-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        margin-top: 40px;
+    }
+
+    .neumorphic-skill-card {
+
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+    .neumorphic-skill-card h3 {
+
+        font-size: 1.2rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .neumorphic-skill-card,
+    .skill-tags span {
+
+        transition: none;
+    }
+
+}
+
+/* =========================================================
+   SECTION 03 — GLASSMORPHISM
+   WHAT I BUILD
+========================================================= */
+
+.glass-services {
+    position: relative;
+    color: #f8f1e5;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.glass-services .section-label {
+    color: #d6b77c !important;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+
+.glass-services h2 {
+    color: #fff8eb !important;
+
+    text-shadow:
+        0 3px 18px rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.glass-services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   GLASS CARD
+========================================================= */
+
+.glass-service-card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 32px 28px;
+
+    border-radius: 22px;
+
+    /*
+       IMPORTANT:
+       This is intentionally transparent.
+       The mountain will remain visible.
+    */
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.13),
+            rgba(255, 255, 255, 0.045)
+        );
+
+    /*
+       Frosted glass
+    */
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    /*
+       Glass border
+    */
+
+    border:
+        1px solid rgba(255, 255, 255, 0.24);
+
+    /*
+       Soft depth
+    */
+
+    box-shadow:
+
+        0 20px 45px
+        rgba(0, 0, 0, 0.22),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.18),
+
+        inset 0 -1px 0
+        rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.6s cubic-bezier(.22, 1, .36, 1),
+        background 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   GLASS LIGHT REFLECTION
+========================================================= */
+
+.glass-service-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -80px;
+    left: -80px;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.16),
+            transparent 70%
+        );
+
+    pointer-events: none;
+
+    transition:
+        transform 0.8s ease,
+        opacity 0.5s ease;
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.glass-service-number {
+
+    display: block;
+
+    margin-bottom: 55px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255, 232, 190, 0.78);
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.glass-service-card h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 1.45rem;
+
+    line-height: 1.15;
+
+    color:
+        #fff8eb !important;
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.65);
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.glass-service-card p {
+
+    color:
+        rgba(255, 245, 228, 0.78) !important;
+
+    line-height: 1.7;
+
+    font-size: 0.91rem;
+
+    text-shadow:
+        0 1px 7px rgba(0, 0, 0, 0.6);
+
+    transition:
+        color 0.4s ease;
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.glass-service-line {
+
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 24px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(214, 183, 124, 0.65),
+            rgba(214, 183, 124, 0)
+        );
+
+    opacity: 0.45;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.5s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+@media (hover: hover) {
+
+    .glass-service-card:hover {
+
+        transform:
+            translateY(-12px);
+
+        /*
+           Still transparent on hover.
+           Mountain remains visible.
+        */
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(255, 255, 255, 0.19),
+                rgba(255, 255, 255, 0.07)
+            );
+
+        border-color:
+            rgba(255, 230, 190, 0.48);
+
+        box-shadow:
+
+            0 30px 65px
+            rgba(0, 0, 0, 0.38),
+
+            0 0 30px
+            rgba(214, 183, 124, 0.08),
+
+            inset 0 1px 0
+            rgba(255, 255, 255, 0.25);
+    }
+
+
+    .glass-service-card:hover::before {
+
+        transform:
+            translate(80px, 60px);
+
+        opacity: 0.8;
+    }
+
+
+    .glass-service-card:hover h3 {
+
+        color:
+            #ffe3ad !important;
+
+        transform:
+            translateX(5px);
+    }
+
+
+    .glass-service-card:hover p {
+
+        color:
+            rgba(255, 248, 235, 0.92) !important;
+    }
+
+
+    .glass-service-card:hover
+    .glass-service-line {
+
+        opacity: 1;
+
+        transform:
+            scaleX(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .glass-services-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .glass-services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+        margin-top: 40px;
+    }
+
+
+    .glass-service-card {
+
+        min-height: 280px;
+
+        padding: 28px;
+
+    }
+
+
+    .glass-service-number {
+
+        margin-bottom: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .glass-service-card,
+    .glass-service-card::before,
+    .glass-service-card h3,
+    .glass-service-card p,
+    .glass-service-line {
+
+        transition: none;
+    }
+
+}
+
+/* =========================================================
+   SECTION 05 — PROJECTS
+   CLAYMORPHISM PROJECT CARDS
+========================================================= */
+
+.projects .project-card {
+
+    /* -------------------------------
+       TRANSPARENT CLAY SURFACE
+    -------------------------------- */
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(225, 218, 207, 0.20),
+            rgba(190, 181, 168, 0.10)
+        ) !important;
+
+    /* Keep mountain video clearly visible */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    /* -------------------------------
+       CLAY SHAPE
+    -------------------------------- */
+
+    border-radius: 28px !important;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.22) !important;
+
+    /* -------------------------------
+       SOFT 3D CLAY DEPTH
+    -------------------------------- */
+
+    box-shadow:
+        12px 16px 30px rgba(0, 0, 0, 0.22),
+        -10px -10px 25px rgba(255, 255, 255, 0.12),
+        inset 5px 5px 12px rgba(255, 255, 255, 0.06),
+        inset -5px -5px 12px rgba(0, 0, 0, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CLAY LIGHT REFLECTION
+========================================================= */
+
+.projects .project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    left: -70px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.12) 0%,
+            rgba(255, 255, 255, 0.03) 45%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+
+    opacity: 0.6;
+
+    transition:
+        transform 0.6s ease,
+        opacity 0.5s ease;
+}
+
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
+
+.projects .project-card > * {
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
+
+.projects .project-card .project-number {
+
+    color:
+        rgba(255, 245, 230, 0.85) !important;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
+.projects .project-card h3 {
+
+    color:
+        #fff8ed !important;
+
+    text-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
+
+.projects .project-card p {
+
+    color:
+        rgba(255, 245, 230, 0.78) !important;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   PROJECT LIST
+========================================================= */
+
+.projects .project-card li,
+.projects .project-card span {
+
+    color:
+        rgba(255, 242, 225, 0.76);
+}
+
+
+/* =========================================================
+   HOVER
+   EXISTING MOVEMENT IS NOT REPLACED
+========================================================= */
+
+@media (hover: hover) {
+
+    .projects .project-card:hover {
+
+        /* Only change the clay surface on hover */
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(235, 227, 215, 0.28),
+                rgba(195, 186, 173, 0.13)
+            ) !important;
+
+        border-color:
+            rgba(255, 255, 255, 0.30) !important;
+
+        box-shadow:
+            18px 24px 45px rgba(0, 0, 0, 0.28),
+            -12px -12px 28px rgba(255, 255, 255, 0.15),
+            inset 6px 6px 14px rgba(255, 255, 255, 0.08),
+            inset -6px -6px 14px rgba(0, 0, 0, 0.07);
+    }
+
+
+    .projects .project-card:hover::before {
+
+        transform:
+            translate(55px, 45px);
+
+        opacity: 0.8;
+    }
+
+
+    .projects .project-card:hover h3 {
+
+        text-shadow:
+            0 4px 14px rgba(0, 0, 0, 0.45);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .projects .project-card {
+
+        border-radius: 24px !important;
+
+        background:
+            linear-gradient(
+                145deg,
+                rgba(225, 218, 207, 0.16),
+                rgba(190, 181, 168, 0.08)
+            ) !important;
+
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projects .project-card::before {
+
+        transition: none;
+    }
+
+}
