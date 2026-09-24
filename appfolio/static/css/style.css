@@ -20,7 +20,6 @@
    --section-parallax
    ========================================================= */
 
-
 /* ================================
    GLOBAL
 ================================ */
@@ -52,7 +51,6 @@ section {
     margin-bottom: 60px;
 }
 
-
 /* ================================
    NAVBAR (base)
 ================================ */
@@ -77,12 +75,10 @@ nav a {
     font-weight: 600;
 }
 
-
 /* ================================
    HERO (base styles live in
    "PREMIUM CINEMATIC HERO" below)
 ================================ */
-
 
 /* ================================
    ABOUT
@@ -112,7 +108,6 @@ nav a {
     margin-bottom: 20px;
     opacity: 0.75;
 }
-
 
 /* ================================
    SKILLS
@@ -172,7 +167,6 @@ nav a {
     color: #f5f0e8;
 }
 
-
 /* ================================
    EDUCATION
 ================================ */
@@ -205,7 +199,6 @@ nav a {
 .education-item:last-child {
     border-bottom: 1px solid rgba(31, 26, 23, 0.2);
 }
-
 
 /* ================================
    PROJECTS
@@ -274,7 +267,6 @@ nav a {
     padding-bottom: 3px;
 }
 
-
 /* ================================
    EXPERIENCE
 ================================ */
@@ -319,7 +311,6 @@ nav a {
     margin-bottom: 15px;
 }
 
-
 /* ================================
    CONTACT
 ================================ */
@@ -337,7 +328,6 @@ nav a {
     color: #f5f0e8;
 }
 
-
 /* ================================
    FOOTER
 ================================ */
@@ -347,9 +337,6 @@ nav a {
     border-top: 1px solid rgba(31, 26, 23, 0.15);
     text-align: center;
 }
-
-
-
 
 /* ================================
    SERVICES / WHAT I BUILD
@@ -415,7 +402,6 @@ nav a {
     opacity: 0.7;
 }
 
-
 /* ================================
    RESPONSIVE (base)
 ================================ */
@@ -430,7 +416,6 @@ nav a {
         grid-template-columns: 1fr;
     }
 }
-
 
 @media (max-width: 768px) {
 
@@ -491,7 +476,6 @@ nav a {
     }
 }
 
-
 @media (max-width: 480px) {
 
     nav {
@@ -503,7 +487,6 @@ nav a {
         text-align: center;
     }
 }
-
 
 /* =========================
    SCROLL REVEAL (JS adds .reveal / .visible)
@@ -519,7 +502,6 @@ nav a {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 /* =========================
    EDUCATION & EXPERIENCE ANIMATION
@@ -545,7 +527,6 @@ nav a {
 .experience-item:nth-child(4) {
     transition-delay: 0.45s;
 }
-
 
 /* =========================
    CONTACT ANIMATION
@@ -576,7 +557,6 @@ nav a {
     transition-delay: 0.3s;
 }
 
-
 /* =========================
    FOOTER ANIMATION
 ========================= */
@@ -593,7 +573,6 @@ nav a {
     transition-delay: 0.4s;
 }
 
-
 /* =========================
    SECTION LABEL ANIMATION
 ========================= */
@@ -608,7 +587,6 @@ nav a {
     opacity: 1;
     transform: translateX(0);
 }
-
 
 /* =========================
    PROJECT CARD REVEAL
@@ -645,7 +623,6 @@ nav a {
     transition-delay: 0.55s;
 }
 
-
 /* =========================
    PAGE LOAD
 ========================= */
@@ -663,7 +640,6 @@ body {
         opacity: 1;
     }
 }
-
 
 /* =========================
    ABOUT HEADING MOTION
@@ -684,7 +660,6 @@ body {
         transform: translateY(0);
     }
 }
-
 
 /* =========================
    ABOUT PARAGRAPHS
@@ -708,7 +683,6 @@ body {
 .about.visible .about-content p:nth-of-type(2) {
     transition-delay: 0.4s;
 }
-
 
 /* =========================
    SKILLS GROUP ANIMATION
@@ -743,7 +717,6 @@ body {
     transition-delay: 0.4s;
 }
 
-
 /* =========================================================
    ADVANCED CINEMATIC ANIMATIONS
 ========================================================= */
@@ -753,7 +726,6 @@ body {
 .hero-content {
     will-change: transform;
 }
-
 
 /* Hero text animations */
 
@@ -837,7 +809,6 @@ body {
     }
 }
 
-
 /* Button light sweep (hero buttons) */
 
 .btn::before,
@@ -862,7 +833,6 @@ body {
     letter-spacing: 0.5px;
 }
 
-
 /* Skill / tool tags */
 
 .skills-list span,
@@ -870,7 +840,6 @@ body {
 .tools-list span {
     display: inline-block;
 }
-
 
 /* Tools floating animation */
 
@@ -915,14 +884,12 @@ body {
 
 }
 
-
 /* Contact link hover (letter-spacing is what stays visible) */
 
 .contact-links a:hover {
     transform: translateX(7px);
     letter-spacing: 1px;
 }
-
 
 /* Footer */
 
@@ -936,7 +903,6 @@ body {
     opacity: 0.65;
     transform: translateY(-2px);
 }
-
 
 /* Floating visual — placeholder, no element uses it yet */
 
@@ -960,7 +926,6 @@ body {
     }
 
 }
-
 
 /* Animated background circles (final look is set in PHASE 8 override) */
 
@@ -1062,7 +1027,6 @@ body {
     animation-delay: -4.5s;
 }
 
-
 /* Cursor glow (element is created by script.js) */
 
 .cursor-glow {
@@ -1090,7 +1054,6 @@ body {
 
 }
 
-
 /* Reduced motion (global) */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1105,7 +1068,6 @@ body {
     }
 
 }
-
 
 /* =========================================================
    HERO VISUAL — pieces that are still visible
@@ -1135,7 +1097,6 @@ body {
     left: 50%;
 }
 
-
 /* =========================================================
    CINEMATIC SECTION TRANSITIONS
 ========================================================= */
@@ -1152,7 +1113,6 @@ body {
         transform 0.8s ease,
         opacity 0.8s ease;
 }
-
 
 /* =========================================================
    STRONGER BACKGROUND CIRCLES
@@ -1181,7 +1141,6 @@ body {
         0 0 70px rgba(31, 26, 23, 0.04);
 }
 
-
 /* =========================================================
    PROJECT CARD — hover outline (::after)
 ========================================================= */
@@ -1199,7 +1158,6 @@ body {
 .project-card:hover::after {
     border-color: rgba(31, 26, 23, 0.15);
 }
-
 
 /* =========================================================
    SKILLS PREMIUM HOVER
@@ -1227,7 +1185,6 @@ body {
     opacity: 0.7;
 }
 
-
 /* =========================================================
    TOOLS INTERACTION
 ========================================================= */
@@ -1241,7 +1198,6 @@ body {
     opacity: 0.7;
 }
 
-
 /* =========================================================
    EXPERIENCE h3 HOVER
 ========================================================= */
@@ -1254,7 +1210,6 @@ body {
 .experience-item:hover h3 {
     transform: translateX(5px);
 }
-
 
 /* =========================================================
    CONTACT LINK UNDERLINE
@@ -1275,7 +1230,6 @@ body {
     width: 100%;
 }
 
-
 /* =========================================================
    REDUCED MOTION (hero visual / cards)
 ========================================================= */
@@ -1294,11 +1248,9 @@ body {
 
 }
 
-
 /* =========================================================
    JS INTERACTION SUPPORT
 ========================================================= */
-
 
 /* SCROLL PROGRESS */
 
@@ -1317,7 +1269,6 @@ body {
 
     transition: width 0.08s linear;
 }
-
 
 /* BACK TO TOP */
 
@@ -1368,7 +1319,6 @@ body {
     transform: translateY(-5px);
 }
 
-
 /* SECTION PARALLAX */
 
 .about::after,
@@ -1382,14 +1332,12 @@ body {
     margin-top: var(--section-parallax, 0px);
 }
 
-
 /* PROJECT 3D */
 
 .project-card {
     perspective: 1000px;
     transform-style: preserve-3d;
 }
-
 
 /* MOBILE */
 
@@ -1409,7 +1357,6 @@ body {
 
 }
 
-
 /* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1423,7 +1370,6 @@ body {
     }
 
 }
-
 
 /* =========================================================
    CINEMATIC SECTION DEPTH — PHASE 2
@@ -1443,7 +1389,6 @@ body {
     z-index: 2;
 }
 
-
 /* Headings depth */
 
 .about h2,
@@ -1458,7 +1403,6 @@ body {
         transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
         opacity 0.8s ease;
 }
-
 
 /* Education / experience timeline marker (see PHASE 5 for the dot) */
 
@@ -1481,7 +1425,6 @@ body {
     transition:
         height 0.7s ease;
 }
-
 
 /* Skills group underline */
 
@@ -1508,7 +1451,6 @@ body {
     width: 100%;
 }
 
-
 /* Tools */
 
 .tools-list {
@@ -1518,7 +1460,6 @@ body {
 .tools-list span {
     will-change: transform;
 }
-
 
 /* Footer separation */
 
@@ -1540,7 +1481,6 @@ body {
     transform: translateX(-50%);
 }
 
-
 /* =========================================================
    PHASE 3 — PREMIUM PROJECT CARDS
 ========================================================= */
@@ -1548,7 +1488,6 @@ body {
 .projects-grid {
     perspective: 1200px;
 }
-
 
 /* Card */
 
@@ -1601,7 +1540,6 @@ body {
         0 8px 20px rgba(31, 26, 23, 0.06);
 }
 
-
 /* Card light sweep */
 
 .project-card::before {
@@ -1634,7 +1572,6 @@ body {
     left: 150%;
 }
 
-
 /* Top card line */
 
 .project-card::after {
@@ -1657,7 +1594,6 @@ body {
 .project-card:hover::after {
     width: 100%;
 }
-
 
 /* Project number */
 
@@ -1694,7 +1630,6 @@ body {
         translateX(8px);
 }
 
-
 /* Project title */
 
 .project-card h3 {
@@ -1723,7 +1658,6 @@ body {
     letter-spacing: -0.3px;
 }
 
-
 /* Project description */
 
 .project-card > p {
@@ -1751,7 +1685,6 @@ body {
         translateZ(20px)
         translateX(4px);
 }
-
 
 /* Project features */
 
@@ -1823,7 +1756,6 @@ body {
     transform: translateX(12px);
 }
 
-
 /* Technology area + tags */
 
 .project-tech {
@@ -1893,7 +1825,6 @@ body {
     transform: translateY(-7px);
 }
 
-
 /* Card reveal */
 
 .projects.visible .project-card {
@@ -1940,7 +1871,6 @@ body {
 
 }
 
-
 /* Project section label */
 
 .projects.visible .section-label {
@@ -1969,13 +1899,11 @@ body {
 
 }
 
-
 /* Grid spacing */
 
 .projects-grid {
     gap: 30px;
 }
-
 
 /* Desktop card variation */
 
@@ -1998,13 +1926,13 @@ body {
 
     .project-card:nth-child(4):hover {
         transform:
-            translateY(10px)
+
+   translateY(10px)
             rotateX(1deg)
             rotateY(-1deg);
     }
 
 }
-
 
 /* Tablet */
 
@@ -2021,7 +1949,6 @@ body {
     }
 
 }
-
 
 /* Mobile */
 
@@ -2063,7 +1990,6 @@ body {
 
 }
 
-
 /* Small mobile */
 
 @media (max-width: 480px) {
@@ -2100,7 +2026,6 @@ body {
 
 }
 
-
 /* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2119,7 +2044,6 @@ body {
     }
 
 }
-
 
 /* =========================================================
    PHASE 4 — PREMIUM NAVBAR + NAVIGATION POLISH
@@ -2216,7 +2140,6 @@ nav a:not(.active)::before {
     opacity: 0;
 }
 
-
 /* Navigation stagger */
 
 nav a:nth-child(1) {
@@ -2251,7 +2174,6 @@ nav a:nth-child(8) {
     transition-delay: 0.14s;
 }
 
-
 /* Navbar entry animation */
 
 nav {
@@ -2280,7 +2202,6 @@ nav {
 
 }
 
-
 /* Navbar link entry */
 
 nav a {
@@ -2308,7 +2229,6 @@ nav a {
     }
 
 }
-
 
 @media (max-width: 900px) {
 
@@ -2357,7 +2277,6 @@ nav a {
 
 }
 
-
 /* =========================================================
    PHASE 5 — EDUCATION + EXPERIENCE (PREMIUM TIMELINE)
 ========================================================= */
@@ -2366,7 +2285,6 @@ nav a {
 .experience-content {
     position: relative;
 }
-
 
 /* Education items */
 
@@ -2489,7 +2407,6 @@ nav a {
     letter-spacing: 0.03em;
 }
 
-
 /* Education reveal */
 
 .education-item {
@@ -2536,7 +2453,6 @@ nav a {
     }
 
 }
-
 
 /* Experience items */
 
@@ -2617,7 +2533,6 @@ nav a {
     opacity: 0.68;
 }
 
-
 /* Experience reveal */
 
 .experience-item {
@@ -2646,7 +2561,6 @@ nav a {
 .experience.visible .experience-item:nth-child(3) {
     animation-delay: 0.4s;
 }
-
 
 /* =========================================================
    PHASE 6 — CONTACT PREMIUM POLISH
@@ -2778,7 +2692,6 @@ nav a {
         scale(0.97);
 }
 
-
 /* Contact reveal */
 
 .contact-content {
@@ -2859,7 +2772,6 @@ nav a {
 
 }
 
-
 /* Footer */
 
 .footer {
@@ -2928,7 +2840,6 @@ nav a {
 
 }
 
-
 /* =========================================================
    PHASE 7 — RESPONSIVE / MOBILE FINAL POLISH
 ========================================================= */
@@ -2977,7 +2888,6 @@ nav a {
     }
 
 }
-
 
 /* Mobile */
 
@@ -3130,7 +3040,6 @@ nav a {
 
 }
 
-
 /* Small mobile */
 
 @media (max-width: 480px) {
@@ -3177,7 +3086,6 @@ nav a {
 
 }
 
-
 /* Touch devices: remove aggressive hover movement */
 
 @media (hover: none) {
@@ -3206,7 +3114,6 @@ nav a {
 
 }
 
-
 /* Accessibility — focus states */
 
 nav a:focus-visible,
@@ -3217,7 +3124,6 @@ nav a:focus-visible,
 
     border-radius: 4px;
 }
-
 
 /* Reduced motion */
 
@@ -3244,12 +3150,10 @@ nav a:focus-visible,
 
 }
 
-
 /* =========================================================
    PHASE 8 — FINAL VISUAL / BACKGROUND SYSTEM
    PREMIUM CINEMATIC ATMOSPHERE
 ========================================================= */
-
 
 /* 01 — GLOBAL BACKGROUND FOUNDATION */
 
@@ -3273,7 +3177,6 @@ body {
 
     overflow-x: hidden;
 }
-
 
 /* 02 — FINE ARCHITECTURAL GRID */
 
@@ -3316,7 +3219,6 @@ body::before {
             transparent 90%
         );
 }
-
 
 /* 03 — SUBTLE FILM GRAIN */
 
@@ -3372,7 +3274,6 @@ body::after {
 
 }
 
-
 /* 04 — SECTION ATMOSPHERE */
 
 section {
@@ -3380,7 +3281,6 @@ section {
 
     isolation: isolate;
 }
-
 
 /* 05 — SOFT SECTION LIGHT
    (for the 8 content sections the class rules above win;
@@ -3438,7 +3338,6 @@ section::after {
 
 }
 
-
 /* 07 — HERO LIGHT SOURCE */
 
 .hero::before {
@@ -3494,7 +3393,6 @@ section::after {
 
 }
 
-
 /* 08 — HERO GRID */
 
 .hero::after {
@@ -3522,7 +3420,6 @@ section::after {
         25% 100%;
 }
 
-
 /* 12 — SECTION LABEL ACCENT */
 
 .section-label {
@@ -3543,7 +3440,6 @@ section::after {
     transform:
         translateX(4px);
 }
-
 
 /* 13 — SECTION LABEL LINE */
 
@@ -3570,7 +3466,6 @@ section::after {
 .section-label:hover::after {
     width: 65px;
 }
-
 
 /* 14–21 — SECTION ATMOSPHERES */
 
@@ -3648,7 +3543,6 @@ section::after {
         );
 }
 
-
 /* 22 — PREMIUM HORIZONTAL LIGHT (contact) */
 
 .contact::after {
@@ -3674,7 +3568,6 @@ section::after {
     pointer-events: none;
 }
 
-
 /* 23 — PROJECT CARD GLASS DEPTH */
 
 .project-card {
@@ -3694,7 +3587,6 @@ section::after {
         blur(4px);
 }
 
-
 /* 24 — SKILL GROUP DEPTH */
 
 .skill-group {
@@ -3707,7 +3599,6 @@ section::after {
             transparent
         );
 }
-
 
 /* 25 — TOOL FLOATING DEPTH */
 
@@ -3734,7 +3625,6 @@ section::after {
         0 12px 30px
         rgba(31, 26, 23, 0.08);
 }
-
 
 /* 27 — CINEMATIC CONTENT LIGHT
    (this is also what styles .education-content::before and
@@ -3774,7 +3664,6 @@ section::after {
     z-index: -1;
 }
 
-
 /* 29 — SCROLL DEPTH */
 
 .about,
@@ -3792,7 +3681,6 @@ section::after {
         transform;
 }
 
-
 /* 30 — HERO VISUAL DEPTH */
 
 .hero-visual {
@@ -3802,7 +3690,6 @@ section::after {
             rgba(31, 26, 23, 0.08)
         );
 }
-
 
 /* 33 — NAVBAR GLASS */
 
@@ -3816,7 +3703,6 @@ nav {
     -webkit-backdrop-filter:
         blur(10px);
 }
-
 
 /* 34 — NAVBAR SCROLLED (class added by script.js) */
 
@@ -3835,7 +3721,6 @@ nav.scrolled {
         rgba(31, 26, 23, 0.07);
 }
 
-
 /* 35 — PREMIUM SELECTION */
 
 ::selection {
@@ -3845,7 +3730,6 @@ nav.scrolled {
     color:
         #1f1a17;
 }
-
 
 /* 36 — SCROLLBAR */
 
@@ -3870,7 +3754,6 @@ nav.scrolled {
     background:
         rgba(31, 26, 23, 0.45);
 }
-
 
 /* 37 — MOBILE BACKGROUND SIMPLIFICATION */
 
@@ -3921,7 +3804,6 @@ nav.scrolled {
 
 }
 
-
 /* 38 — SMALL MOBILE PERFORMANCE */
 
 @media (max-width: 480px) {
@@ -3951,7 +3833,6 @@ nav.scrolled {
 
 }
 
-
 /* 39 — REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3964,7 +3845,6 @@ nav.scrolled {
     }
 
 }
-
 
 /* 40 — FINAL VISUAL STABILITY */
 
@@ -3979,7 +3859,6 @@ video {
     display:
         block;
 }
-
 
 /* =========================================================
    PHASE 8 — FINAL AMBIENT CIRCLES (size / position per section)
@@ -4045,7 +3924,6 @@ video {
     top: 15%;
 }
 
-
 /* Keep the actual content above the circles */
 
 .about-content,
@@ -4059,7 +3937,6 @@ video {
     position: relative;
     z-index: 2;
 }
-
 
 /* =========================================================
    HERO — FIX TEXT HIDING BEHIND VISUAL
@@ -4117,13 +3994,11 @@ video {
 
 }
 
-
 /* =========================================================
    PREMIUM CINEMATIC HERO
    MotionSites-inspired adaptation
    Django / HTML / CSS version
 ========================================================= */
-
 
 /* HERO FOUNDATION */
 
@@ -4150,7 +4025,6 @@ video {
     padding: 0 !important;
 }
 
-
 /* BACKGROUND VIDEO */
 
 .hero-video-layer {
@@ -4167,7 +4041,6 @@ video {
 
     background: #000;
 }
-
 
 .hero-background-video {
     position: absolute;
@@ -4201,7 +4074,6 @@ video {
     pointer-events: none;
 }
 
-
 /* CINEMATIC VIDEO OVERLAY */
 
 .hero-video-overlay {
@@ -4221,7 +4093,6 @@ video {
     pointer-events: none;
 }
 
-
 /* VIGNETTE */
 
 .hero-video-vignette {
@@ -4239,7 +4110,6 @@ video {
 
     pointer-events: none;
 }
-
 
 /* HERO INNER LAYOUT */
 
@@ -4269,7 +4139,6 @@ video {
     gap: 50px;
 }
 
-
 /* LEFT CONTENT */
 
 .premium-hero .hero-content {
@@ -4294,7 +4163,6 @@ video {
         both;
 }
 
-
 @keyframes premiumHeroContent {
 
     from {
@@ -4312,7 +4180,6 @@ video {
     }
 
 }
-
 
 /* LABEL */
 
@@ -4348,7 +4215,6 @@ video {
 .premium-hero .hero-label span {
     opacity: 0.45;
 }
-
 
 /* MAIN HEADING */
 
@@ -4388,7 +4254,6 @@ video {
         rgba(0, 0, 0, 0.28);
 }
 
-
 /* DESCRIPTION */
 
 .premium-hero .hero-description {
@@ -4407,7 +4272,6 @@ video {
 
     line-height: 1.75;
 }
-
 
 /* STATUS */
 
@@ -4432,7 +4296,6 @@ video {
     letter-spacing: 0.03em;
 }
 
-
 .status-dot {
     color: #ffffff;
 
@@ -4444,7 +4307,6 @@ video {
         ease-in-out
         infinite;
 }
-
 
 @keyframes statusPulse {
 
@@ -4458,7 +4320,6 @@ video {
     }
 
 }
-
 
 /* BUTTONS */
 
@@ -4477,7 +4338,6 @@ video {
 
     margin: 0;
 }
-
 
 .premium-hero .hero-buttons .btn {
     position: relative;
@@ -4512,7 +4372,6 @@ video {
         border-color 0.35s ease;
 }
 
-
 /* Primary */
 
 .premium-hero .primary-btn {
@@ -4526,7 +4385,6 @@ video {
         0 15px 35px
         rgba(0, 0, 0, 0.18);
 }
-
 
 /* Secondary */
 
@@ -4546,18 +4404,15 @@ video {
         blur(8px);
 }
 
-
 .premium-hero .hero-buttons .btn:hover {
     transform:
         translateY(-4px);
 }
 
-
 .premium-hero .primary-btn:hover {
     background:
         rgba(255, 255, 255, 0.88);
 }
-
 
 .premium-hero .secondary-btn:hover {
     background:
@@ -4566,7 +4421,6 @@ video {
     border-color:
         rgba(255, 255, 255, 0.35);
 }
-
 
 /* RIGHT HERO VISUAL */
 
@@ -4596,7 +4450,6 @@ video {
     isolation: isolate;
 }
 
-
 /* LIQUID GLASS */
 
 .premium-hero .liquid-glass {
@@ -4625,7 +4478,6 @@ video {
         0 30px 80px
         rgba(0, 0, 0, 0.35);
 }
-
 
 .premium-hero .liquid-glass::before {
     content: "";
@@ -4664,7 +4516,6 @@ video {
     z-index: 5;
 }
 
-
 /* CODE CARD */
 
 .premium-hero .hero-code-card {
@@ -4698,7 +4549,6 @@ video {
         transform 0.4s ease;
 }
 
-
 @keyframes codeCardFloat {
 
     0%,
@@ -4714,7 +4564,6 @@ video {
 
 }
 
-
 /* CODE TOP */
 
 .premium-hero .code-top {
@@ -4725,7 +4574,6 @@ video {
     margin-bottom: 26px;
 }
 
-
 .premium-hero .code-top span {
     width: 9px;
     height: 9px;
@@ -4735,7 +4583,6 @@ video {
     background:
         rgba(255, 255, 255, 0.48);
 }
-
 
 /* CODE CONTENT */
 
@@ -4758,19 +4605,16 @@ video {
         rgba(255, 255, 255, 0.82);
 }
 
-
 .premium-hero .code-content p {
     margin: 0;
 
     white-space: nowrap;
 }
 
-
 .premium-hero .code-content p span {
     color:
         rgba(255, 255, 255, 0.38);
 }
-
 
 .premium-hero .code-content b {
     color:
@@ -4778,7 +4622,6 @@ video {
 
     font-weight: 600;
 }
-
 
 .premium-hero .code-key {
     display: inline-block;
@@ -4788,7 +4631,6 @@ video {
     color:
         rgba(255, 255, 255, 0.42) !important;
 }
-
 
 /* FLOATING TECHNOLOGY GLASS
    (position, colors and stacking are finalised in the
@@ -4842,7 +4684,6 @@ video {
     pointer-events: none;
 }
 
-
 /* ORBITS */
 
 .premium-hero .hero-orbit {
@@ -4861,7 +4702,6 @@ video {
     opacity: 0.8;
 }
 
-
 .premium-hero .orbit-one {
     width: 430px;
     height: 430px;
@@ -4875,7 +4715,6 @@ video {
         linear
         infinite;
 }
-
 
 .premium-hero .orbit-two {
     width: 340px;
@@ -4891,7 +4730,6 @@ video {
         infinite;
 }
 
-
 @keyframes orbitRotateOne {
 
     from {
@@ -4906,7 +4744,6 @@ video {
 
 }
 
-
 @keyframes orbitRotateTwo {
 
     from {
@@ -4920,7 +4757,6 @@ video {
     }
 
 }
-
 
 /* GLASS STATUS */
 
@@ -4972,7 +4808,6 @@ video {
     white-space: nowrap;
 }
 
-
 .premium-hero .hero-glass-status span {
     width: 5px;
     height: 5px;
@@ -4991,7 +4826,6 @@ video {
         ease-in-out
         infinite;
 }
-
 
 /* SCROLL INDICATOR */
 
@@ -5020,7 +4854,6 @@ video {
     letter-spacing: 0.16em;
 }
 
-
 .premium-hero .scroll-line {
     width: 45px;
 
@@ -5029,7 +4862,6 @@ video {
     background:
         rgba(255, 255, 255, 0.38);
 }
-
 
 /* TABLET */
 
@@ -5056,7 +4888,6 @@ video {
     }
 
 }
-
 
 /* SMALL LAPTOP / TABLET */
 
@@ -5124,7 +4955,6 @@ video {
     }
 
 }
-
 
 /* MOBILE */
 
@@ -5217,7 +5047,6 @@ video {
 
 }
 
-
 /* SMALL PHONE */
 
 @media (max-width: 400px) {
@@ -5249,7 +5078,6 @@ video {
 
 }
 
-
 /* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
@@ -5264,7 +5092,6 @@ video {
 
 }
 
-
 /* =========================================================
    HERO — DESKTOP VISUAL SIZE
 ========================================================= */
@@ -5277,7 +5104,6 @@ video {
     }
 
 }
-
 
 /* =========================================================
    HERO — VIDEO BRIGHTNESS
@@ -5296,7 +5122,6 @@ video {
 .premium-hero .hero-video-overlay {
     opacity: 0.35 !important;
 }
-
 
 /* =========================================================
    HERO — TECH TAG STYLE (final)
@@ -5319,7 +5144,6 @@ video {
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
 }
-
 
 /* =========================================================
    HERO FLOATING TECHNOLOGY TAGS — FINAL POSITION
@@ -5358,14 +5182,11 @@ video {
     right: 25px !important;
 }
 
-
 /* Keep the code card above the orbit but below the tech tags */
 .hero-visual .hero-code-card {
     position: absolute !important;
     z-index: 50 !important;
 }
-
-
 
 /* =========================================================
    HERO — TECH TAGS ARRANGED AROUND THE CODE CARD
@@ -5431,7 +5252,6 @@ video {
     transform: translate(-50%, -50%);
 }
 
-
 @media (max-width: 900px) {
     .hero-visual {
         --card-x: calc(50% - var(--card-w) / 2);
@@ -5443,7 +5263,6 @@ video {
         top: var(--card-y);
     }
 }
-
 
 /* =========================================================
    HERO — TEXT COLORS (colors only; no size/font/layout changes)
@@ -5508,7 +5327,6 @@ video {
     color: rgba(246, 239, 224, 0.7);
 }
 
-
 /* ==========================================
    WHAT I BUILD — SLOW CINEMATIC ANIMATION
 ========================================== */
@@ -5524,14 +5342,12 @@ video {
         background 0.5s ease;
 }
 
-
 /* Scroll reveal */
 
 .services.visible .service-item {
     opacity: 1;
     transform: translateX(0) scale(1);
 }
-
 
 /* Slow stagger */
 
@@ -5550,7 +5366,6 @@ video {
 .services.visible .service-item:nth-child(4) {
     transition-delay: 1.05s;
 }
-
 
 /* ==========================================
    HOVER — CARD GROWS + LIFTS
@@ -5593,7 +5408,6 @@ video {
 
 }
 
-
 /* ==========================================
    MOBILE
 ========================================== */
@@ -5607,7 +5421,6 @@ video {
     }
 
 }
-
 
 .global-bg-video {
     position: fixed;
@@ -5633,8 +5446,6 @@ body {
     color: #f3ede0;
 }
 
-
-
 nav {
     background: rgba(11, 11, 13, 0.45) !important;
 }
@@ -5646,7 +5457,6 @@ nav.scrolled {
 nav a {
     color: #f3ede0 !important;
 }
-
 
 /* =========================================================
    PREMIUM WARM CINEMATIC TEXT THEME
@@ -5666,7 +5476,6 @@ nav a {
     --cinema-glass: rgba(16, 15, 13, 0.58);
 }
 
-
 /* =========================================================
    GLOBAL SECTION TEXT
    ========================================================= */
@@ -5681,7 +5490,6 @@ nav a {
 .contact {
     color: var(--cinema-ivory);
 }
-
 
 /* ---------- MAIN HEADINGS ---------- */
 
@@ -5706,7 +5514,6 @@ nav a {
         transform 0.5s ease;
 }
 
-
 /* ---------- PARAGRAPHS ---------- */
 
 .about p,
@@ -5728,7 +5535,6 @@ nav a {
         opacity 0.4s ease;
 }
 
-
 /* ---------- SECTION LABELS ---------- */
 
 .about .section-label,
@@ -5748,7 +5554,6 @@ nav a {
         0 1px 8px rgba(0, 0, 0, 0.6);
 
 }
-
 
 /* =========================================================
    SECTION HEADING HOVER
@@ -5771,7 +5576,6 @@ nav a {
 
     transform: translateX(5px);
 }
-
 
 /* =========================================================
    SKILLS
@@ -5801,7 +5605,6 @@ nav a {
         box-shadow 0.5s ease;
 }
 
-
 /* Skill category titles */
 
 .skill-group h3,
@@ -5812,7 +5615,6 @@ nav a {
     text-shadow:
         0 2px 10px rgba(0, 0, 0, 0.6);
 }
-
 
 /* Skill tags */
 
@@ -5833,7 +5635,6 @@ nav a {
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-
 
 /* Skill hover */
 
@@ -5870,7 +5671,6 @@ nav a {
     }
 }
 
-
 /* =========================================================
    SERVICES / WHAT I BUILD
    ========================================================= */
@@ -5899,7 +5699,6 @@ nav a {
         box-shadow 0.5s ease;
 }
 
-
 .service-item h3 {
 
     color: var(--cinema-white) !important;
@@ -5908,12 +5707,10 @@ nav a {
         0 2px 12px rgba(0, 0, 0, 0.65);
 }
 
-
 .service-item p {
 
     color: var(--cinema-soft) !important;
 }
-
 
 /* Service number */
 
@@ -5921,7 +5718,6 @@ nav a {
 
     color: var(--cinema-gold) !important;
 }
-
 
 /* Service hover */
 
@@ -5954,7 +5750,6 @@ nav a {
     }
 }
 
-
 /* =========================================================
    EDUCATION
    ========================================================= */
@@ -5971,7 +5766,6 @@ nav a {
         border-color 0.4s ease;
 }
 
-
 .education-item h3 {
 
     color: var(--cinema-white) !important;
@@ -5980,13 +5774,11 @@ nav a {
         0 2px 9px rgba(0, 0, 0, 0.6);
 }
 
-
 .education-item p {
 
     color:
         var(--cinema-soft) !important;
 }
-
 
 /* Education year */
 
@@ -5996,274 +5788,143 @@ nav a {
         var(--cinema-gold) !important;
 }
 
-
 /* Education dot */
 
 .education-item::before {
-
-    border-color:
-        var(--cinema-gold) !important;
+    border-color: var(--cinema-gold) !important;
 }
-
 
 .education-item:hover {
-
-    border-color:
-        rgba(229, 201, 141, 0.40) !important;
+    border-color: rgba(229, 201, 141, 0.40) !important;
 }
-
 
 /* =========================================================
    PROJECTS
    ========================================================= */
-
 .project-card {
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(18, 16, 13, 0.70),
-            rgba(50, 40, 28, 0.42)
-        ) !important;
-
-    border:
-        1px solid rgba(214, 183, 124, 0.22) !important;
-
-    color:
-        var(--cinema-ivory) !important;
-
+    background: linear-gradient(135deg, rgba(18, 16, 13, 0.70), rgba(50, 40, 28, 0.42)) !important;
+    border: 1px solid rgba(214, 183, 124, 0.22) !important;
+    color: var(--cinema-ivory) !important;
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
-
-    box-shadow:
-        0 20px 55px rgba(0, 0, 0, 0.30),
-        inset 0 1px 0 rgba(255, 247, 232, 0.06);
-
-    transition:
-        transform 0.6s cubic-bezier(.22,1,.36,1),
-        background 0.5s ease,
-        border-color 0.5s ease,
-        box-shadow 0.5s ease;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.30), inset 0 1px 0 rgba(255, 247, 232, 0.06);
+    transition: transform 0.6s cubic-bezier(.22,1,.36,1), background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
-
 
 .project-card h3 {
-
-    color:
-        var(--cinema-white) !important;
-
-    text-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.65);
+    color: var(--cinema-white) !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
-
 
 .project-card p {
-
-    color:
-        var(--cinema-soft) !important;
+    color: var(--cinema-soft) !important;
 }
-
 
 .project-card span,
 .project-card li {
-
-    color:
-        var(--cinema-muted) !important;
+    color: var(--cinema-muted) !important;
 }
-
 
 /* Project hover */
-
-@media (hover:hover) {
-
+@media (hover: hover) {
     .project-card:hover {
-
-        background:
-            linear-gradient(
-                135deg,
-                rgba(54, 43, 29, 0.92),
-                rgba(18, 16, 13, 0.86)
-            ) !important;
-
-        border-color:
-            rgba(229, 201, 141, 0.55) !important;
-
-        box-shadow:
-            0 30px 75px rgba(0, 0, 0, 0.50),
-            0 0 35px rgba(214, 183, 124, 0.08);
-
-        transform:
-            translateY(-8px);
+        background: linear-gradient(135deg, rgba(54, 43, 29, 0.92), rgba(18, 16, 13, 0.86)) !important;
+        border-color: rgba(229, 201, 141, 0.55) !important;
+        box-shadow: 0 30px 75px rgba(0, 0, 0, 0.50), 0 0 35px rgba(214, 183, 124, 0.08);
+        transform: translateY(-8px);
     }
-
     .project-card:hover h3 {
-
-        color:
-            var(--cinema-gold-bright) !important;
+        color: var(--cinema-gold-bright) !important;
     }
-
     .project-card:hover p {
-
-        color:
-            var(--cinema-ivory) !important;
+        color: var(--cinema-ivory) !important;
     }
 }
-
 
 /* =========================================================
    TOOLS
    ========================================================= */
-
 .tools-list span {
-
-    color:
-        var(--cinema-ivory) !important;
-
-    background:
-        rgba(18, 16, 13, 0.42) !important;
-
-    border-color:
-        rgba(214, 183, 124, 0.25) !important;
-
-    transition:
-        transform 0.35s ease,
-        color 0.35s ease,
-        border-color 0.35s ease,
-        box-shadow 0.35s ease;
+    color: var(--cinema-ivory) !important;
+    background: rgba(18, 16, 13, 0.42) !important;
+    border-color: rgba(214, 183, 124, 0.25) !important;
+    transition: transform 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
-
 
 .tools-list span:hover {
-
-    color:
-        var(--cinema-gold-bright) !important;
-
-    border-color:
-        rgba(229, 201, 141, 0.60) !important;
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.30),
-        0 0 18px rgba(214, 183, 124, 0.08);
+    color: var(--cinema-gold-bright) !important;
+    border-color: rgba(229, 201, 141, 0.60) !important;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.30), 0 0 18px rgba(214, 183, 124, 0.08);
 }
-
 
 /* =========================================================
    EXPERIENCE
    ========================================================= */
-
 .experience-item {
-
-    color:
-        var(--cinema-ivory);
-
-    border-color:
-        rgba(214, 183, 124, 0.18) !important;
+    color: var(--cinema-ivory);
+    border-color: rgba(214, 183, 124, 0.18) !important;
 }
-
 
 .experience-item h3 {
-
-    color:
-        var(--cinema-white) !important;
+    color: var(--cinema-white) !important;
 }
-
 
 .experience-item p {
-
-    color:
-        var(--cinema-soft) !important;
+    color: var(--cinema-soft) !important;
 }
-
 
 .experience-item:hover {
-
-    border-color:
-        rgba(229, 201, 141, 0.40) !important;
+    border-color: rgba(229, 201, 141, 0.40) !important;
 }
-
 
 /* =========================================================
    CONTACT
    ========================================================= */
-
 .contact a {
-
-    color:
-        var(--cinema-ivory) !important;
-
-    transition:
-        color 0.35s ease,
-        text-shadow 0.35s ease;
+    color: var(--cinema-ivory) !important;
+    transition: color 0.35s ease, text-shadow 0.35s ease;
 }
-
 
 .contact a:hover {
-
-    color:
-        var(--cinema-gold-bright) !important;
-
-    text-shadow:
-        0 0 18px rgba(214, 183, 124, 0.25);
+    color: var(--cinema-gold-bright) !important;
+    text-shadow: 0 0 18px rgba(214, 183, 124, 0.25);
 }
-
 
 /* =========================================================
    GOLD ACCENT LINE
    ========================================================= */
-
 .section-label::after {
-
-    background:
-        var(--cinema-gold) !important;
-
-    box-shadow:
-        0 0 10px rgba(214, 183, 124, 0.20);
+    background: var(--cinema-gold) !important;
+    box-shadow: 0 0 10px rgba(214, 183, 124, 0.20);
 }
-
 
 /* =========================================================
    SUBTLE TEXT REVEAL
    ========================================================= */
-
 @keyframes cinematicTextGlow {
-
     0% {
-        text-shadow:
-            0 2px 12px rgba(0, 0, 0, 0.55);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
     }
-
     50% {
-        text-shadow:
-            0 2px 14px rgba(0, 0, 0, 0.55),
-            0 0 18px rgba(214, 183, 124, 0.08);
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55), 0 0 18px rgba(214, 183, 124, 0.08);
     }
-
     100% {
-        text-shadow:
-            0 2px 12px rgba(0, 0, 0, 0.55);
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
     }
 }
-
 
 .skills-content h2,
 .services-content h2,
 .education-content h2,
 .projects-content h2 {
-
-    animation:
-        cinematicTextGlow 5s ease-in-out infinite;
+    animation: cinematicTextGlow 5s ease-in-out infinite;
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
-
 @media (max-width: 768px) {
-
     .about h2,
     .skills h2,
     .tools h2,
@@ -6272,30 +5933,23 @@ nav a {
     .projects h2,
     .experience h2,
     .contact h2 {
-        text-shadow:
-            0 2px 10px rgba(0, 0, 0, 0.55);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
     }
-
     .skill-group,
     .service-item,
     .project-card {
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
     }
-
 }
 
 /* =========================================================
    SECTION 02 — NEUMORPHIC SKILLS
-========================================================= */
-
+   ========================================================= */
 .neumorphic-skills {
     position: relative;
     color: #f5ead8;
 }
-
-
-/* ---------- SECTION HEADING ---------- */
 
 .neumorphic-skills .section-label {
     color: #d8bd91 !important;
@@ -6304,866 +5958,328 @@ nav a {
 
 .neumorphic-skills h2 {
     color: #fff8ec !important;
-
-    text-shadow:
-        0 2px 12px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
-
-/* ---------- 4 CARD GRID ---------- */
-
 .neumorphic-skills-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 40px;
-
     margin-top: 55px;
 }
 
-
-/* =========================================================
-   NEUMORPHIC CARD
-========================================================= */
-
 .neumorphic-skill-card {
-
     position: relative;
-
     min-height: 190px;
-
     padding: 35px;
-
     border-radius: 28px;
-
-    /*
-       Semi-transparent warm surface.
-       Lets the mountain remain visible.
-    */
-    background:
-        rgba(210, 204, 193, 0.72);
-
-    /*
-       Neumorphic depth
-    */
-    box-shadow:
-
-        12px 12px 25px rgba(0, 0, 0, 0.30),
-
-        -10px -10px 25px rgba(255, 255, 255, 0.22),
-
-        inset 1px 1px 2px
-        rgba(255, 255, 255, 0.20);
-
-    border:
-        1px solid rgba(255, 255, 255, 0.22);
-
+    background: rgba(210, 204, 193, 0.72);
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.30), -10px -10px 25px rgba(255, 255, 255, 0.22), inset 1px 1px 2px rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-
-    transition:
-        transform 0.45s cubic-bezier(.22, 1, .36, 1),
-        box-shadow 0.45s ease,
-        background 0.45s ease;
+    transition: transform 0.45s cubic-bezier(.22, 1, .36, 1), box-shadow 0.45s ease, background 0.45s ease;
 }
 
-
-/* ---------- CARD NUMBER ---------- */
-
 .skill-card-number {
-
     display: block;
-
     margin-bottom: 18px;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
     font-weight: 700;
-
     color: #806b4d;
 }
 
-
-/* ---------- CARD TITLE ---------- */
-
 .neumorphic-skill-card h3 {
-
     margin-bottom: 25px;
-
     font-size: 1.35rem;
-
     font-weight: 600;
-
     color: #29251f !important;
-
     letter-spacing: -0.3px;
 }
 
-
-/* =========================================================
-   SKILL TAGS
-========================================================= */
-
 .skill-tags {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 12px;
 }
 
-
 .skill-tags span {
-
     display: inline-flex;
-
     align-items: center;
-
     padding: 9px 16px;
-
     border-radius: 50px;
-
     font-size: 0.82rem;
-
     color: #40392f;
-
     background: rgba(215, 210, 201, 0.72);
-
     border: 1px solid rgba(255, 255, 255, 0.18);
-
-    /*
-       Small neumorphic pill
-    */
-    box-shadow:
-
-        4px 4px 9px rgba(0, 0, 0, 0.18),
-
-        -3px -3px 8px
-        rgba(255, 255, 255, 0.30);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        color 0.3s ease;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.18), -3px -3px 8px rgba(255, 255, 255, 0.30);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
-
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
 
 @media (hover: hover) {
-
     .neumorphic-skill-card:hover {
-
-        transform:
-            translateY(-8px);
-
-        background:
-            rgba(222, 217, 208, 0.80);
-
-        box-shadow:
-
-            18px 18px 35px
-            rgba(0, 0, 0, 0.34),
-
-            -14px -14px 30px
-            rgba(255, 255, 255, 0.25),
-
-            inset 1px 1px 3px
-            rgba(255, 255, 255, 0.25);
+        transform: translateY(-8px);
+        background: rgba(222, 217, 208, 0.80);
+        box-shadow: 18px 18px 35px rgba(0, 0, 0, 0.34), -14px -14px 30px rgba(255, 255, 255, 0.25), inset 1px 1px 3px rgba(255, 255, 255, 0.25);
     }
-
-
     .neumorphic-skill-card:hover .skill-card-number {
-
         color: #a27b42;
     }
-
-
     .skill-tags span:hover {
-
-        transform:
-            translateY(-3px);
-
+        transform: translateY(-3px);
         color: #241f19;
-
-        box-shadow:
-
-            inset 3px 3px 7px
-            rgba(0, 0, 0, 0.14),
-
-            inset -3px -3px 7px
-            rgba(255, 255, 255, 0.35);
+        box-shadow: inset 3px 3px 7px rgba(0, 0, 0, 0.14), inset -3px -3px 7px rgba(255, 255, 255, 0.35);
     }
-
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
 
 @media (max-width: 768px) {
-
     .neumorphic-skills-grid {
-
         grid-template-columns: 1fr;
-
         gap: 25px;
-
         margin-top: 40px;
     }
-
     .neumorphic-skill-card {
-
         min-height: auto;
-
         padding: 28px;
     }
-
     .neumorphic-skill-card h3 {
-
         font-size: 1.2rem;
     }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
     .neumorphic-skill-card,
     .skill-tags span {
-
         transition: none;
     }
-
 }
 
 /* =========================================================
    SECTION 03 — GLASSMORPHISM
    WHAT I BUILD
-========================================================= */
-
+   ========================================================= */
 .glass-services {
     position: relative;
     color: #f8f1e5;
 }
 
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
 .glass-services .section-label {
     color: #d6b77c !important;
-
     letter-spacing: 2px;
-
-    text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.55);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
-
 
 .glass-services h2 {
     color: #fff8eb !important;
-
-    text-shadow:
-        0 3px 18px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.65);
 }
 
-
-/* =========================================================
-   GRID
-========================================================= */
-
 .glass-services-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
-
     margin-top: 55px;
 }
 
-
-/* =========================================================
-   GLASS CARD
-========================================================= */
-
 .glass-service-card {
-
     position: relative;
-
     min-height: 330px;
-
     padding: 32px 28px;
-
     border-radius: 22px;
-
-    /*
-       IMPORTANT:
-       This is intentionally transparent.
-       The mountain will remain visible.
-    */
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.13),
-            rgba(255, 255, 255, 0.045)
-        );
-
-    /*
-       Frosted glass
-    */
-
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.045));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-
-    /*
-       Glass border
-    */
-
-    border:
-        1px solid rgba(255, 255, 255, 0.24);
-
-    /*
-       Soft depth
-    */
-
-    box-shadow:
-
-        0 20px 45px
-        rgba(0, 0, 0, 0.22),
-
-        inset 0 1px 0
-        rgba(255, 255, 255, 0.18),
-
-        inset 0 -1px 0
-        rgba(0, 0, 0, 0.08);
-
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.18), inset 0 -1px 0 rgba(0, 0, 0, 0.08);
     overflow: hidden;
-
-    transition:
-        transform 0.6s cubic-bezier(.22, 1, .36, 1),
-        background 0.5s ease,
-        border-color 0.5s ease,
-        box-shadow 0.5s ease;
+    transition: transform 0.6s cubic-bezier(.22, 1, .36, 1), background 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
-
-
-/* =========================================================
-   GLASS LIGHT REFLECTION
-========================================================= */
 
 .glass-service-card::before {
-
     content: "";
-
     position: absolute;
-
     top: -80px;
     left: -80px;
-
     width: 180px;
     height: 180px;
-
     border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.16),
-            transparent 70%
-        );
-
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
     pointer-events: none;
-
-    transition:
-        transform 0.8s ease,
-        opacity 0.5s ease;
+    transition: transform 0.8s ease, opacity 0.5s ease;
 }
-
-
-/* =========================================================
-   NUMBER
-========================================================= */
 
 .glass-service-number {
-
     display: block;
-
     margin-bottom: 55px;
-
     font-size: 11px;
-
     letter-spacing: 3px;
-
-    color:
-        rgba(255, 232, 190, 0.78);
-
-    text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 232, 190, 0.78);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
-
-
-/* =========================================================
-   CARD TITLE
-========================================================= */
 
 .glass-service-card h3 {
-
     margin-bottom: 18px;
-
     font-size: 1.45rem;
-
     line-height: 1.15;
-
-    color:
-        #fff8eb !important;
-
-    text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.65);
-
-    transition:
-        color 0.4s ease,
-        transform 0.4s ease;
+    color: #fff8eb !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65);
+    transition: color 0.4s ease, transform 0.4s ease;
 }
-
-
-/* =========================================================
-   CARD DESCRIPTION
-========================================================= */
 
 .glass-service-card p {
-
-    color:
-        rgba(255, 245, 228, 0.78) !important;
-
+    color: rgba(255, 245, 228, 0.78) !important;
     line-height: 1.7;
-
     font-size: 0.91rem;
-
-    text-shadow:
-        0 1px 7px rgba(0, 0, 0, 0.6);
-
-    transition:
-        color 0.4s ease;
+    text-shadow: 0 1px 7px rgba(0, 0, 0, 0.6);
+    transition: color 0.4s ease;
 }
 
-
-/* =========================================================
-   BOTTOM LINE
-========================================================= */
-
 .glass-service-line {
-
     position: absolute;
-
     left: 28px;
     right: 28px;
     bottom: 24px;
-
     height: 1px;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(214, 183, 124, 0.65),
-            rgba(214, 183, 124, 0)
-        );
-
+    background: linear-gradient(90deg, rgba(214, 183, 124, 0.65), rgba(214, 183, 124, 0));
     opacity: 0.45;
-
-    transition:
-        opacity 0.4s ease,
-        transform 0.5s ease;
+    transition: opacity 0.4s ease, transform 0.5s ease;
 }
-
-
-/* =========================================================
-   HOVER
-========================================================= */
 
 @media (hover: hover) {
-
     .glass-service-card:hover {
-
-        transform:
-            translateY(-12px);
-
-        /*
-           Still transparent on hover.
-           Mountain remains visible.
-        */
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(255, 255, 255, 0.19),
-                rgba(255, 255, 255, 0.07)
-            );
-
-        border-color:
-            rgba(255, 230, 190, 0.48);
-
-        box-shadow:
-
-            0 30px 65px
-            rgba(0, 0, 0, 0.38),
-
-            0 0 30px
-            rgba(214, 183, 124, 0.08),
-
-            inset 0 1px 0
-            rgba(255, 255, 255, 0.25);
+        transform: translateY(-12px);
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.07));
+        border-color: rgba(255, 230, 190, 0.48);
+        box-shadow: 0 30px 65px rgba(0, 0, 0, 0.38), 0 0 30px rgba(214, 183, 124, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.25);
     }
-
-
     .glass-service-card:hover::before {
-
-        transform:
-            translate(80px, 60px);
-
+        transform: translate(80px, 60px);
         opacity: 0.8;
     }
-
-
     .glass-service-card:hover h3 {
-
-        color:
-            #ffe3ad !important;
-
-        transform:
-            translateX(5px);
+        color: #ffe3ad !important;
+        transform: translateX(5px);
     }
-
-
     .glass-service-card:hover p {
-
-        color:
-            rgba(255, 248, 235, 0.92) !important;
+        color: rgba(255, 248, 235, 0.92) !important;
     }
-
-
-    .glass-service-card:hover
-    .glass-service-line {
-
+    .glass-service-card:hover .glass-service-line {
         opacity: 1;
-
-        transform:
-            scaleX(1.08);
+        transform: scaleX(1.08);
     }
-
 }
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================= */
 
 @media (max-width: 1000px) {
-
     .glass-services-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
 
 @media (max-width: 768px) {
-
     .glass-services-grid {
-
         grid-template-columns: 1fr;
-
         gap: 22px;
-
         margin-top: 40px;
     }
-
-
     .glass-service-card {
-
         min-height: 280px;
-
         padding: 28px;
-
     }
-
-
     .glass-service-number {
-
         margin-bottom: 40px;
     }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
     .glass-service-card,
     .glass-service-card::before,
     .glass-service-card h3,
     .glass-service-card p,
     .glass-service-line {
-
         transition: none;
     }
-
 }
 
 /* =========================================================
    SECTION 05 — PROJECTS
    CLAYMORPHISM PROJECT CARDS
-========================================================= */
-
+   ========================================================= */
 .projects .project-card {
-
-    /* -------------------------------
-       TRANSPARENT CLAY SURFACE
-    -------------------------------- */
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(225, 218, 207, 0.20),
-            rgba(190, 181, 168, 0.10)
-        ) !important;
-
-    /* Keep mountain video clearly visible */
+    background: linear-gradient(145deg, rgba(225, 218, 207, 0.20), rgba(190, 181, 168, 0.10)) !important;
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-
-    /* -------------------------------
-       CLAY SHAPE
-    -------------------------------- */
-
     border-radius: 28px !important;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.22) !important;
-
-    /* -------------------------------
-       SOFT 3D CLAY DEPTH
-    -------------------------------- */
-
-    box-shadow:
-        12px 16px 30px rgba(0, 0, 0, 0.22),
-        -10px -10px 25px rgba(255, 255, 255, 0.12),
-        inset 5px 5px 12px rgba(255, 255, 255, 0.06),
-        inset -5px -5px 12px rgba(0, 0, 0, 0.07);
-
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 12px 16px 30px rgba(0, 0, 0, 0.22), -10px -10px 25px rgba(255, 255, 255, 0.12), inset 5px 5px 12px rgba(255, 255, 255, 0.06), inset -5px -5px 12px rgba(0, 0, 0, 0.07);
     overflow: hidden;
 }
 
-
-/* =========================================================
-   CLAY LIGHT REFLECTION
-========================================================= */
-
 .projects .project-card::before {
-
     content: "";
-
     position: absolute;
-
     width: 180px;
     height: 180px;
-
     top: -90px;
     left: -70px;
-
     border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.12) 0%,
-            rgba(255, 255, 255, 0.03) 45%,
-            transparent 72%
-        );
-
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 45%, transparent 72%);
     pointer-events: none;
-
     opacity: 0.6;
-
-    transition:
-        transform 0.6s ease,
-        opacity 0.5s ease;
+    transition: transform 0.6s ease, opacity 0.5s ease;
 }
 
-
-/* =========================================================
-   PROJECT CONTENT
-========================================================= */
-
 .projects .project-card > * {
-
     position: relative;
     z-index: 2;
 }
 
-
-/* =========================================================
-   PROJECT NUMBER
-========================================================= */
-
 .projects .project-card .project-number {
-
-    color:
-        rgba(255, 245, 230, 0.85) !important;
-
-    text-shadow:
-        0 2px 7px rgba(0, 0, 0, 0.45);
+    color: rgba(255, 245, 230, 0.85) !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45);
 }
-
-
-/* =========================================================
-   PROJECT TITLE
-========================================================= */
 
 .projects .project-card h3 {
-
-    color:
-        #fff8ed !important;
-
-    text-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.55);
+    color: #fff8ed !important;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
 }
-
-
-/* =========================================================
-   PROJECT DESCRIPTION
-========================================================= */
 
 .projects .project-card p {
-
-    color:
-        rgba(255, 245, 230, 0.78) !important;
-
-    text-shadow:
-        0 2px 7px rgba(0, 0, 0, 0.45);
+    color: rgba(255, 245, 230, 0.78) !important;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.45);
 }
-
-
-/* =========================================================
-   PROJECT LIST
-========================================================= */
 
 .projects .project-card li,
 .projects .project-card span {
-
-    color:
-        rgba(255, 242, 225, 0.76);
+    color: rgba(255, 242, 225, 0.76);
 }
-
-
-/* =========================================================
-   HOVER
-   EXISTING MOVEMENT IS NOT REPLACED
-========================================================= */
 
 @media (hover: hover) {
-
     .projects .project-card:hover {
-
-        /* Only change the clay surface on hover */
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(235, 227, 215, 0.28),
-                rgba(195, 186, 173, 0.13)
-            ) !important;
-
-        border-color:
-            rgba(255, 255, 255, 0.30) !important;
-
-        box-shadow:
-            18px 24px 45px rgba(0, 0, 0, 0.28),
-            -12px -12px 28px rgba(255, 255, 255, 0.15),
-            inset 6px 6px 14px rgba(255, 255, 255, 0.08),
-            inset -6px -6px 14px rgba(0, 0, 0, 0.07);
+        background: linear-gradient(145deg, rgba(235, 227, 215, 0.28), rgba(195, 186, 173, 0.13)) !important;
+        border-color: rgba(255, 255, 255, 0.30) !important;
+        box-shadow: 18px 24px 45px rgba(0, 0, 0, 0.28), -12px -12px 28px rgba(255, 255, 255, 0.15), inset 6px 6px 14px rgba(255, 255, 255, 0.08), inset -6px -6px 14px rgba(0, 0, 0, 0.07);
     }
-
-
     .projects .project-card:hover::before {
-
-        transform:
-            translate(55px, 45px);
-
+        transform: translate(55px, 45px);
         opacity: 0.8;
     }
-
-
     .projects .project-card:hover h3 {
-
-        text-shadow:
-            0 4px 14px rgba(0, 0, 0, 0.45);
+        text-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
     }
-
 }
 
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
 @media (max-width: 768px) {
-
     .projects .project-card {
-
         border-radius: 24px !important;
-
-        background:
-            linear-gradient(
-                145deg,
-                rgba(225, 218, 207, 0.16),
-                rgba(190, 181, 168, 0.08)
-            ) !important;
-
+        background: linear-gradient(145deg, rgba(225, 218, 207, 0.16), rgba(190, 181, 168, 0.08)) !important;
         backdrop-filter: blur(2px);
         -webkit-backdrop-filter: blur(2px);
     }
-
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
     .projects .project-card::before {
-
         transition: none;
     }
-
 }
